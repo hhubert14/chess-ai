@@ -4,13 +4,15 @@ from torch.utils.data import DataLoader
 from torch.optim import AdamW
 from accelerate.test_utils.testing import get_backend
 from tqdm.auto import tqdm
-
+from torch.amp import autocast, GradScaler
 
 import torch
 # import evaluate
 
 model_name = "google/flan-t5-large"
 batch_size = 1
+
+scaler = GradScaler()
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
@@ -23,8 +25,8 @@ split_dataset = raw_dataset.train_test_split(test_size=0.2, seed=42)
 def tokenize_function(examples):
     # inputs = tokenizer(examples["inputs"], truncation=True, padding="max_length", max_length=512)
     # labels = tokenizer(examples["label"], truncation=True, padding="max_length", max_length=512)
-    inputs = tokenizer(examples["inputs"], truncation=True, padding=True)
-    labels = tokenizer(examples["label"], truncation=True, padding=True)
+    inputs = tokenizer(examples["inputs"], truncation=False, padding=True)
+    labels = tokenizer(examples["label"], truncation=False, padding=True)
 
     inputs["labels"] = labels["input_ids"]
     return inputs
@@ -61,12 +63,12 @@ for epoch in range(num_epochs):
     for batch in train_dataloader:
         batch = {k: v.to(device) for k, v in batch.items()}
 
-        outputs = model(**batch)
-        loss = outputs.loss
-        loss.backward()
-
-        optimizer.step()
-        lr_scheduler.step()
+        with autocast():
+            outputs = model(**batch)
+            loss = outputs.loss
+        scaler.scale(loss).backward()
+        scaler.step(optimizer)
+        scaler.step(lr_scheduler)
         optimizer.zero_grad()
         progress_bar.update(1)
 

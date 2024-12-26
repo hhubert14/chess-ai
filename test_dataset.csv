@@ -1,0 +1,31 @@
+inputs,label
+"It is Black's turn to move. The board position is:
+. . . . . r k .
+. b q n . . p p
+p . . . . . . .
+P . p p p p . .
+. . . . n P . .
+. . P . Q B . .
+. . P . N . P P
+R . . . . R K .
+The best move is g7g5 and the evaluation is -24. Explain why g7g5 is the best move.","Not 20.Bxe4? dxe4 21.fxe5 Qxe5 22.Qf4 Qxf4 23.Rxf4 g6 24.Rd1 (or 24.Rb1 Bc6, followed by Bc6-b5-c4 and/or Ne5-c6 or Ne5-c4, with a big advantage for Black.) 24...Ne5 with a clear advantage for Black."
+"It is White's turn to move. The board position is:
+. . . . . . . .
+. . . . . . . b
+. R . . . . . .
+. . p . k . . .
+. . P . p . . .
+. P . . . p . .
+r . . . . . . .
+. . K B . . . .
+The best move is b6c6 and the evaluation is -553. Explain why b6c6 is the best move.","If we exclude black's going astray in time pressure, the result of the game can be considered quite just."
+"It is White's turn to move. The board position is:
+. . . r . . k .
+. . . . q p p .
+R . . . p . . p
+. p . . Q . . .
+. P . . P . . .
+P . . . . P . .
+. . r . . . P P
+. . . . . R K .
+The best move is g1h1 and the evaluation is -98. Explain why g1h1 is the best move.","Note how Black has secured the only two open files on the chessboard, which is ironic when you consider the disposition of the White rooks after 15.Rfd1."

@@ -5,63 +5,60 @@ from torch.optim import AdamW
 from accelerate.test_utils.testing import get_backend
 from tqdm.auto import tqdm
 
-
 import torch
-# import evaluate
 
+# TODO add validation set
+
+# Adjustable variables
 model_name = "google/flan-t5-base"
 batch_size = 1
+train_dataset_path = "/kaggle/input/adsfdaw/train_dataset.csv"
+test_dataset_path = "/kaggle/input/adsfdaw/test_dataset.csv"
+num_epochs = 20
+learning_rate = 5e-5
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
-train_dataset = load_dataset("csv", data_files={"full": "/kaggle/input/adsfdaw/train_dataset.csv"}, streaming=True)["full"]
-eval_dataset = load_dataset("csv", data_files={"full": "/kaggle/input/adsfdaw/test_dataset.csv"}, streaming=True)["full"]
-# print("Raw dataset features:", raw_dataset.features)
+# Load datasets in streaming mode
+train_dataset = load_dataset("csv", data_files={"full": train_dataset_path}, streaming=True)["full"]
+eval_dataset = load_dataset("csv", data_files={"full": test_dataset_path}, streaming=True)["full"]
 
-# split_dataset = raw_dataset.train_test_split(test_size=0.2, seed=42)
-# print(split_dataset)
-def tokenize_function(examples):
-    # inputs = tokenizer(examples["inputs"], truncation=True, padding="max_length", max_length=512)
-    # labels = tokenizer(examples["label"], truncation=True, padding="max_length", max_length=512)
-    inputs = tokenizer(examples["inputs"], truncation=True, padding=True)
-    labels = tokenizer(examples["label"], truncation=True, padding=True)
-
+# Tokenize dynamically using a collate function
+def tokenize_batch(batch):
+    inputs_text = [example["inputs"] for example in batch]
+    labels_text = [example["label"] for example in batch]
+    
+    # inputs = tokenizer(inputs_text, truncation=True, padding=True, max_length=512, return_tensors="pt")
+    # labels = tokenizer(labels_text, truncation=True, padding=True, max_length=512, return_tensors="pt")
+    inputs = tokenizer(inputs_text, truncation=False, padding=True, return_tensors="pt")
+    labels = tokenizer(labels_text, truncation=False, padding=True, return_tensors="pt")
+    
     inputs["labels"] = labels["input_ids"]
     return inputs
 
-train_tokenized_dataset = train_dataset.map(tokenize_function, batched=True)
-eval_tokenized_dataset = eval_dataset.map(tokenize_function, batched=True)
-# Potentially remove inputs col
-train_tokenized_dataset = train_tokenized_dataset.remove_columns(["inputs", "label"])
-eval_tokenized_dataset = eval_tokenized_dataset.remove_columns(["inputs", "label"])
-# tokenized_dataset = tokenized_dataset.remove_columns(["inputs"])
-# tokenized_dataset = tokenized_dataset.rename_column("label", "labels")
-train_tokenized_dataset.set_format("torch")
-eval_tokenized_dataset.set_format("torch")
-# print(tokenized_dataset)
+# DataLoaders
+train_dataloader = DataLoader(train_dataset, batch_size=batch_size, collate_fn=tokenize_batch)
+eval_dataloader = DataLoader(eval_dataset, batch_size=batch_size, collate_fn=tokenize_batch)
 
-data_collator = DataCollatorWithPadding(tokenizer)
+optimizer = AdamW(model.parameters(), lr=learning_rate)
 
-train_dataloader = DataLoader(train_tokenized_dataset, shuffle=True, batch_size=batch_size, collate_fn=data_collator)
-eval_dataloader = DataLoader(eval_tokenized_dataset, batch_size=batch_size, collate_fn=data_collator)
-
-optimizer = AdamW(model.parameters(), lr=5e-5)
-
-num_epochs = 3
-num_training_steps = num_epochs * len(train_dataloader)
+# Scheduler (num_training_steps calculated dynamically)
 lr_scheduler = get_scheduler(
-    name="linear", optimizer=optimizer, num_warmup_steps=0, num_training_steps=num_training_steps
-) # Used to adjust the learning rate of the optimizer during training
+    name="linear", optimizer=optimizer, num_warmup_steps=0, num_training_steps=1  # Placeholder
+)
 
-device, _, _ = get_backend() # automatically detects the underlying device type (CUDA, CPU, XPU, MPS, etc.)
+# Device setup
+device, _, _ = get_backend()
 model.to(device)
 
-progress_bar = tqdm(range(num_training_steps))
-
 # Train
+progress_bar = tqdm(total=None)  # Dynamic progress bar
 model.train()
+step_count = 0  # Manually count steps
+
 for epoch in range(num_epochs):
+    print(f"Epoch: {epoch + 1}")
     for batch in train_dataloader:
         batch = {k: v.to(device) for k, v in batch.items()}
 
@@ -74,8 +71,16 @@ for epoch in range(num_epochs):
         optimizer.zero_grad()
         progress_bar.update(1)
 
+        step_count += 1  # Increment step count
+
+progress_bar.close()
+
+# Update lr_scheduler with actual training steps
+lr_scheduler = get_scheduler(
+    name="linear", optimizer=optimizer, num_warmup_steps=0, num_training_steps=step_count
+)
+
 # Evaluate
-# metric = evaluate.load("accuracy")
 model.eval()
 predictions_text = []
 for batch in eval_dataloader:
@@ -83,12 +88,10 @@ for batch in eval_dataloader:
     with torch.no_grad():
         outputs = model(**batch)
 
-    logits = outputs.logits
-    predictions = torch.argmax(logits, dim=-1)
-    decoded_preds = tokenizer.batch_decode(predictions, skip_special_tokens=True)
-    predictions_text.append(decoded_preds)
-#     metric.add_batch(predictions=predictions, references=batch["labels"])
+    # Use model.generate for predictions
+    generated_ids = model.generate(input_ids=batch["input_ids"], max_length=512)
+    decoded_preds = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
+    predictions_text.extend(decoded_preds)
 
-# metric.compute()
-print(len(predictions_text[0]))
-print(predictions_text[0])
+print(len(predictions_text))
+print(predictions_text)

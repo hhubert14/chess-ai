@@ -1,31 +1,101 @@
 inputs,label
-"It is Black's turn to move. The board position is:
-. . . . . r k .
-. b q n . . p p
-p . . . . . . .
-P . p p p p . .
-. . . . n P . .
-. . P . Q B . .
-. . P . N . P P
-R . . . . R K .
-The best move is g7g5 and the evaluation is -24. Explain why g7g5 is the best move.","Not 20.Bxe4? dxe4 21.fxe5 Qxe5 22.Qf4 Qxf4 23.Rxf4 g6 24.Rd1 (or 24.Rb1 Bc6, followed by Bc6-b5-c4 and/or Ne5-c6 or Ne5-c4, with a big advantage for Black.) 24...Ne5 with a clear advantage for Black."
+"It is White's turn to move. The board position is:
+. . k . . . . .
+p p . . . . p p
+q . n b . . . .
+. . . . . . . .
+n . . P . P . .
+N . P . . . . .
+. B . . . . P P
+. R . R . . . K
+The best move is b2a1 and the evaluation is -452. Explain why b2a1 is the best move.",Black keeps control of b5 & c4 to restrain Na3 and this leaves White helpless. The big pawn at b2 is the cornerstone of White's position (remarkably) and it's about to disappear. This was a rather amazing game in that White avoided the obviouly necessary d2-d4 and was punished severely.
+"It is White's turn to move. The board position is:
+r . b q k . . r
+p p . . . p p .
+. . . . p . . p
+. . . n . . . .
+. Q . N . . . P
+. . . . . . . .
+P P P . . P P .
+R . . . K B . R
+The best move is b4a3 and the evaluation is 44. Explain why b4a3 is the best move.","I'm not so certain the knight is better here. It blocks the d-file and chases Qb4, but it also loses contact with d7, where it was useful preventing difficulties on the a4-e8 diagonal."
+"It is White's turn to move. The board position is:
+r . r . . . k .
+. p . . . p . .
+. p . . b . . p
+. . . p b . p .
+. . . P n . . .
+. B . N . . . P
+P P . . R P P .
+. . . . R . K .
+The best move is d3e5 and the evaluation is 43. Explain why d3e5 is the best move.",I don't see what Black gains by this exchange.
 "It is White's turn to move. The board position is:
 . . . . . . . .
-. . . . . . . b
-. R . . . . . .
-. . p . k . . .
-. . P . p . . .
-. P . . . p . .
-r . . . . . . .
-. . K B . . . .
-The best move is b6c6 and the evaluation is -553. Explain why b6c6 is the best move.","If we exclude black's going astray in time pressure, the result of the game can be considered quite just."
-"It is White's turn to move. The board position is:
-. . . r . . k .
-. . . . q p p .
-R . . . p . . p
-. p . . Q . . .
+r . . n k . . p
+p p R . . p p .
+. . . . p . . .
+. . . . . . P .
 . P . . P . . .
-P . . . . P . .
-. . r . . . P P
-. . . . . R K .
-The best move is g1h1 and the evaluation is -98. Explain why g1h1 is the best move.","Note how Black has secured the only two open files on the chessboard, which is ironic when you consider the disposition of the White rooks after 15.Rfd1."
+P . . N . P K P
+. . . . . . . .
+The best move is d2e4 and the evaluation is 166. Explain why d2e4 is the best move.","Keeping the knight out of e4 with 24...f5? allows White to post the knight efficiently elsewhere with 25.gxf5 gxf5 26.Nc4, and Black is losing a pawn, as 26...b5 allows 27.Nd6+ etc."
+"It is Black's turn to move. The board position is:
+. . . r r . k .
+p . . n . p p .
+q . p . p n . p
+. . . . N . . P
+. B Q P . . . .
+. . . . . . . .
+P P . . . P P .
+. . R . R . K .
+The best move is a6c4 and the evaluation is 38. Explain why a6c4 is the best move.",White's pieces are much better and Pc6 is very weak. The only question is whether Black can apply equivalent pressure to Pd4.
+"It is Black's turn to move. The board position is:
+r . b q . r k .
+p p p . n p b p
+. . . . . . p .
+n . . P . . . .
+. . . N . P . .
+. . N B B . . .
+P P P . . . P P
+R . . Q . R K .
+The best move is e7d5 and the evaluation is -14. Explain why e7d5 is the best move.","White cannot play 11.e5? because of 11...c5, followed by the pawn fork 12...d4."
+"It is White's turn to move. The board position is:
+. . . q k b . r
+. b r n . p p p
+p . . p p n . .
+. . . . . . . .
+N . . N P . . .
+. . . . . B . .
+. P P . Q P P P
+R . B R . . K .
+The best move is e4e5 and the evaluation is 121. Explain why e4e5 is the best move.",If 12... Be7 13. Bd2 e5 14. Nf5 g6 15. Nxe7 Qxe7 16. Bb4 Rc6 17. Qd2 Nc5 18. Nxc5 dxc5 19. Ba5 O-O 20. Ra3! Bb7 21. Rd3 Rcc8 22. Bd8! Rcxd8 only move when 23. Rxd8 Rxd8 24. Qxd8 Qxd8 25. Rxd8 + Kg7 26. Rd6!+- is a sample variation.
+"It is Black's turn to move. The board position is:
+r . b q . r k .
+p p . . . p b p
+n n . . . . p .
+. . p P . . . .
+. . . . . . . .
+. . N . . . P P
+P P . . N P B .
+R . B Q . R K .
+The best move is b6c4 and the evaluation is 76. Explain why b6c4 is the best move.","White would like to cramp Black's pieces, but the one pawn at d5 can't do much damage by itself."
+"It is White's turn to move. The board position is:
+r . b . . r . k
+. . . . . p . p
+p . . p . b . .
+. . . . p . q .
+R . B . P p . .
+. . P . . P . .
+. P N . . . P P
+. . . Q . R K .
+The best move is f1f2 and the evaluation is 39. Explain why f1f2 is the best move.",These moves are very much taken from a King's Indian Defense player's repertoire.
+"It is Black's turn to move. The board position is:
+r . . . . r k .
+. p p . q p p .
+p . . p . . . p
+. . . . p . . n
+. . . P P B . .
+. P P . . N . .
+. . P Q . P P P
+R . . . R . K .
+The best move is h5f4 and the evaluation is 15. Explain why h5f4 is the best move.","(17.Qe3 with the idea of Rad1, Rd2, Red1 might be better. )"

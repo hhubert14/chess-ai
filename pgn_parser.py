@@ -55,7 +55,9 @@ def parse_pgns(directory_path):
                 player_to_move = 'White' if board.turn else 'Black'
 
                 if comment:
-                    games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{fen_to_text(fen_string)}\nThe best move is {best_move} and the evaluation is {evaluation['value']}. Explain why {best_move} is the best move.",
+                    # games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{fen_to_text(fen_string)}\nThe best move is {best_move} and the centipawn loss is {evaluation['value']}. Explain why {best_move} is the best move.",
+                    #                    "label": comment})
+                    games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{fen_to_text(fen_string)}\nThe best move is {best_move}. Explain why {best_move} is the best move.",
                                        "label": comment})
                     
     random.shuffle(games_data)

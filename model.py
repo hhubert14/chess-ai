@@ -5,13 +5,12 @@ from torch.optim import AdamW
 from accelerate.test_utils.testing import get_backend
 from tqdm.auto import tqdm
 
-
 import torch
 
 # TODO add validation set
 
 # Adjustable variables
-model_name = "meta-llama/Llama-3.1-8B"
+model_name = "google/gemma-2-2b"
 batch_size = 1
 train_dataset_path = "/content/train_dataset.csv"
 test_dataset_path = "/content/test_dataset.csv"
@@ -21,13 +20,14 @@ model_dir = f"{model_name}_saved"
 
 # "google/flan-t5-base"
 
-# model_config = {"rope_scaling": {"type": "linear", "factor": 8.0}} 
+# model_config = {"rope_scaling": {"type": "linear", "factor": 8.0}}
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 # model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 # model = AutoModelForCausalLM.from_pretrained(model_name, config=model_config)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 model.gradient_checkpointing_enable()
+model.half()
 
 
 # Load datasets in streaming mode
@@ -36,7 +36,7 @@ eval_dataset = load_dataset("csv", data_files={"full": test_dataset_path}, strea
 
 # Tokenize dynamically using a collate function
 tokenizer.add_special_tokens({'pad_token': '[PAD]'})
-# model.resize_token_embeddings(len(tokenizer))
+model.resize_token_embeddings(len(tokenizer))
 def tokenize_batch(batch):
     inputs_text = [example["inputs"] for example in batch]
     labels_text = [example["label"] for example in batch]
@@ -46,16 +46,16 @@ def tokenize_batch(batch):
     inputs = tokenizer(
         inputs_text,
         truncation=False,
-        padding=True,
-        max_length=512,
+        padding="max_length",
+        max_length=256,
         return_tensors="pt",
         add_special_tokens=True,
         )
     labels = tokenizer(
         labels_text,
         truncation=False,
-        padding=True,
-        max_length=512,
+        padding="max_length",
+        max_length=256,
         return_tensors="pt",
         add_special_tokens=True,
         )
@@ -111,6 +111,8 @@ lr_scheduler = get_scheduler(
 model.eval()
 predictions_text = []
 for batch in eval_dataloader:
+    print("Input shape:", batch["input_ids"].shape)
+    print("Labels shape:", batch["labels"].shape)
     batch = {k: v.to(device) for k, v in batch.items()}
     with torch.no_grad():
         outputs = model(**batch)

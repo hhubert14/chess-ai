@@ -4,16 +4,15 @@ import chess.svg
 from stockfish import Stockfish
 import csv
 import random
-from functions.functions import fen_to_text
-
-# Note: The comment might not always align with the objective best move
+from functions.functions import fen_to_text, convert_move_to_text
 
 # Adjustable variables
 stockfish_path = "C:/Users/huang/repos/Personal/chess-ai/stockfish.exe"
 pgn_folder_path = "C:/Users/huang/repos/Personal/chess-ai/pgn-files"
-train_csv_file_path = "C:/Users/huang/repos/Personal/chess-ai/train_dataset.csv"
-test_csv_file_path = "C:/Users/huang/repos/Personal/chess-ai/test_dataset.csv"
+train_csv_file_path = "C:/Users/huang/repos/Personal/chess-ai/datasets/train_puzzles.csv"
+test_csv_file_path = "C:/Users/huang/repos/Personal/chess-ai/datasets/test_puzzles.csv"
 test_set_percentage = 0.01
+time_to_think = 5000
 
 stockfish = Stockfish(path=stockfish_path)
 
@@ -47,19 +46,17 @@ def parse_pgns(directory_path):
                 # Inputs
                 fen_string = board.fen()
                 stockfish.set_fen_position(fen_string)
-                best_move = stockfish.get_best_move()
-                evaluation = stockfish.get_evaluation()
+                best_move = stockfish.get_best_move(wtime=time_to_think, btime=time_to_think)
+                # print(f"Best move: {best_move}")
+                if best_move == None:
+                    break
 
-                # Label
-                comment = node.comment.strip() if node.comment else ""
+                evaluation = stockfish.get_evaluation()
 
                 player_to_move = 'White' if board.turn else 'Black'
 
-                if comment:
-                    # games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{fen_to_text(fen_string)}\nThe best move is {best_move} and the centipawn loss is {evaluation['value']}. Explain why {best_move} is the best move.",
-                    #                    "label": comment})
-                    games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{fen_to_text(fen_string)}\nThe best move is {best_move}. Explain why {best_move} is the best move.",
-                                       "label": comment})
+                games_data.append({"inputs": f"{player_to_move} to move. Position is {fen_string}. What is the best move?",
+                                   "label": convert_move_to_text(fen_string, best_move)})
                     
     random.shuffle(games_data)
 
@@ -69,11 +66,6 @@ def parse_pgns(directory_path):
     test_dataset = games_data[:split_idx]
 
     return train_dataset, test_dataset
-
-# def fen_to_text(fen):
-#     board = chess.Board(fen)
-#     text = str(board)
-#     return text
             
 if __name__ == "__main__":
     train_dataset, test_dataset = parse_pgns(pgn_folder_path)

@@ -1,7 +1,7 @@
 import csv
 
 # Adjustable variable
-file_path = 'C:/Users/huang/repos/Personal/chess-ai/train_dataset.csv'
+file_path = 'C:/Users/huang/repos/Personal/chess-ai/datasets/train_puzzles.csv'
 
 with open(file_path, 'r') as file:
     reader = csv.reader(file)

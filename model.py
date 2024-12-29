@@ -4,6 +4,8 @@ from torch.utils.data import DataLoader
 from torch.optim import AdamW
 from accelerate.test_utils.testing import get_backend
 from tqdm.auto import tqdm
+from peft import LoftQConfig, LoraConfig, get_peft_model
+from peft import get_peft_model, LoraConfig, TaskType, prepare_model_for_kbit_training
 
 import torch
 
@@ -23,11 +25,15 @@ model_dir = f"{model_name}_saved"
 # model_config = {"rope_scaling": {"type": "linear", "factor": 8.0}}
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-# model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
-# model = AutoModelForCausalLM.from_pretrained(model_name, config=model_config)
 model = AutoModelForCausalLM.from_pretrained(model_name)
-model.gradient_checkpointing_enable()
-model.half()
+# model.gradient_checkpointing_enable()
+# model.half()
+
+peft_config = LoraConfig(inference_mode=False, r=8, lora_alpha=32, lora_dropout=0.1, peft_type=TaskType.CAUSAL_LM)
+# loftq_config = LoftQConfig(loftq_bits=4, ...)           # set 4bit quantization
+# lora_config = LoraConfig(..., init_lora_weights="loftq", loftq_config=loftq_config)
+model = get_peft_model(model, peft_config)
+print(model.print_trainable_parameters())
 
 
 # Load datasets in streaming mode
@@ -37,6 +43,9 @@ eval_dataset = load_dataset("csv", data_files={"full": test_dataset_path}, strea
 # Tokenize dynamically using a collate function
 tokenizer.add_special_tokens({'pad_token': '[PAD]'})
 model.resize_token_embeddings(len(tokenizer))
+tokenizer.pad_token_id = tokenizer.pad_token_id  # Ensure tokenizer uses the same pad token for labels
+tokenizer.label_pad_token_id = tokenizer.pad_token_id  # Set
+
 def tokenize_batch(batch):
     inputs_text = [example["inputs"] for example in batch]
     labels_text = [example["label"] for example in batch]
@@ -46,20 +55,22 @@ def tokenize_batch(batch):
     inputs = tokenizer(
         inputs_text,
         truncation=False,
-        padding="max_length",
-        max_length=256,
+        padding=True,
+        # max_length=256,
         return_tensors="pt",
         add_special_tokens=True,
         )
     labels = tokenizer(
         labels_text,
         truncation=False,
-        padding="max_length",
-        max_length=256,
+        padding=True,
+        # max_length=256,
         return_tensors="pt",
         add_special_tokens=True,
         )
 
+    # Replace pad token in labels with -100 to ignore during loss computation
+    labels["input_ids"][labels["input_ids"] == tokenizer.pad_token_id] = -100
     inputs["labels"] = labels["input_ids"]
     return inputs
 

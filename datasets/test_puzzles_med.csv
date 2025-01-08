@@ -1,0 +1,337 @@
+inputs,label
+Black to move. Position is r1bqkb1r/pp3ppp/2n5/2ppP3/5Pn1/1QN2N2/PP1P2PP/R1B1KB1R b KQkq - 1 8. What is the best move?,pawn on c5 to c4
+White to move. Position is 5rk1/1p3ppp/8/8/1pP1P3/3pNnP1/1Q1RbqBP/5N1K w - - 0 28. What is the best move?,queen on b2 captures pawn on g7
+White to move. Position is rnbqkbnr/pp1p1ppp/4p3/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4. What is the best move?,knight on f3 captures pawn on d4
+White to move. Position is r4rk1/p4ppp/Bp2p1q1/3bn3/1P1NnP2/P3P3/6PP/2RQBRK1 w - - 1 17. What is the best move?,pawn on f4 captures knight on e5
+Black to move. Position is rn3r1k/pp2b3/2p4p/q2pPp1P/3P1Q1P/2NBP3/PP6/2KR3R b - - 2 19. What is the best move?,bishop on e7 to g5
+White to move. Position is 1r3r2/6k1/p4n2/3p1p1p/3PpP2/bp2B1PP/P1RN4/5RK1 w - - 0 28. What is the best move?,knight on d2 captures pawn on b3
+Black to move. Position is rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1. What is the best move?,pawn on e7 to e5
+Black to move. Position is 1nkrr3/1p4pp/1Pp1qp2/8/1P1B4/2Q4P/P5P1/3R1RK1 b - - 0 29. What is the best move?,queen on e6 to d5
+Black to move. Position is rnbqk1nr/pp3ppp/4p3/b1ppP3/1P1P4/P1N5/2P2PPP/R1BQKBNR b KQkq - 0 6. What is the best move?,pawn on c5 captures pawn on d4
+White to move. Position is 1r3rk1/1b1qbppp/p2pp3/6P1/1p1BP2P/5P2/PPPQ4/2KR1B1R w - - 0 17. What is the best move?,pawn on h4 to h5
+Black to move. Position is 2r3k1/pb3pbR/1p2pqp1/8/3r1PQ1/PP5R/2p1B1PP/2B3K1 b - - 0 27. What is the best move?,rook on d4 to d1
+White to move. Position is 4q3/4bb1n/3pk1p1/1p6/1PpQ1pPN/2P5/2BN1P2/6K1 w - - 4 42. What is the best move?,knight on d2 to e4
+White to move. Position is r1bqkb1r/pppn1ppp/4pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 3 5. What is the best move?,pawn on c4 captures pawn on d5
+White to move. Position is r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4. What is the best move?,bishop on b5 to a4
+White to move. Position is r3q1k1/ppp2ppp/2nb2b1/6N1/2BP1B2/P1P5/5PPP/R2Q2K1 w - - 2 18. What is the best move?,bishop on f4 captures bishop on d6
+White to move. Position is rnbq1rk1/pp2ppbp/3p1np1/8/2PNP3/2N5/PP2BPPP/R1BQK2R w KQ - 2 8. What is the best move?,bishop on c1 to e3
+Black to move. Position is r7/p5kp/5Rp1/bpBPp1P1/2n1P2P/6N1/P5P1/5K2 b - - 12 34. What is the best move?,bishop on a5 to b6
+Black to move. Position is r1bq3k/5rbn/1p1p2n1/pNpPp1PR/P1P1PpP1/8/1PQBBN2/2K4R b - - 4 24. What is the best move?,bishop on g7 to f8
+White to move. Position is r1b2rk1/pp1nqppp/2p1pn2/8/1bBP4/2N1PN2/PP2QPPP/R1B2RK1 w - - 5 10. What is the best move?,pawn on a2 to a3
+Black to move. Position is r1bqkb1r/pp2pppp/5n2/3P2B1/8/2NQ1N2/PP3PPP/R3K2R b KQkq - 0 10. What is the best move?,pawn on g7 to g6
+Black to move. Position is r3r3/pp3pkQ/n5p1/q1pP1bN1/8/P1n5/1P2BPPP/R4RK1 b - - 0 17. What is the best move?,king on g7 to f6
+Black to move. Position is 8/p2r2kp/6p1/npBPp1P1/4P2P/8/P3K1P1/5N2 b - - 9 41. What is the best move?,rook on d7 to c7
+White to move. Position is r1b1k2r/ppppnp1p/1bn2q2/1B2p1p1/1P2P3/N1P2N2/P2P1PPP/R1BQ1RK1 w kq - 0 8. What is the best move?,pawn on d2 to d4
+Black to move. Position is 3kr2r/2R3pp/3p4/3P4/4P1n1/8/P4QPP/1R4K1 b - - 0 28. What is the best move?,knight on g4 captures queen on f2
+Black to move. Position is r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3. What is the best move?,pawn on a7 to a6
+Black to move. Position is r5k1/6pp/p3B3/1ppp4/5B2/5Pp1/Pq4P1/R4R1K b - - 1 25. What is the best move?,king on g8 to h8
+White to move. Position is r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3. What is the best move?,pawn on d2 to d4
+Black to move. Position is rnbqkb1r/pppn1ppp/4p3/3pP3/3P1P2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 5. What is the best move?,pawn on c7 to c5
+White to move. Position is rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2. What is the best move?,knight on g1 to f3
+Black to move. Position is 4k2r/1b3p2/1n2p2p/6p1/1bpP4/1qN3B1/1PQ1PPPP/3K1B1R b k - 4 21. What is the best move?,bishop on b4 captures knight on c3
+Black to move. Position is r4b1r/p4ppp/8/3p1k2/8/5P2/PP3P1P/R1BR2K1 b - - 5 18. What is the best move?,rook on a8 to d8
+Black to move. Position is rnbqkbnr/pp2pppp/2p5/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 3. What is the best move?,knight on g8 to f6
+Black to move. Position is r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/2N2N2/PP3PPP/R1BQK2R b KQkq - 2 7. What is the best move?,knight on f6 captures pawn on e4
+Black to move. Position is r1bqkbnr/pp1ppppp/2n5/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 3. What is the best move?,pawn on c5 captures pawn on d4
+White to move. Position is r1b2rk1/1p1p1ppp/2q1pn2/4P3/pbP5/2N1nPP1/PP1NQ2P/3RKB1R w K - 3 15. What is the best move?,queen on e2 captures knight on e3
+Black to move. Position is rn2k1nr/pp3ppp/1q2p3/2bpP3/8/2NQ4/PPP1NPPP/R1B2RK1 b kq - 1 9. What is the best move?,knight on b8 to d7
+White to move. Position is r1bq1rk1/pp2ppbp/2n3p1/8/2BpP3/2P1B3/P3NPPP/R2Q1RK1 w - - 0 11. What is the best move?,pawn on c3 captures pawn on d4
+Black to move. Position is 3k4/pr3ppp/8/2b5/4R3/1P1pBP2/P4P1P/4K3 b - - 5 34. What is the best move?,bishop on c5 to b4
+Black to move. Position is rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1. What is the best move?,pawn on c7 to c5
+Black to move. Position is 4Q3/3K1b1p/5p2/5P2/4k1P1/8/7P/8 b - - 0 43. What is the best move?,bishop on f7 captures queen on e8
+Black to move. Position is rnbqkbnr/pp1ppppp/8/2p5/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 2. What is the best move?,pawn on a7 to a6
+White to move. Position is r4rk1/1p4bp/p2q1p2/2pP1p2/Rn2P3/2N2N2/1P4PP/3Q1RK1 w - - 0 18. What is the best move?,knight on f3 to h4
+White to move. Position is r1bqk2r/ppp1npbp/2np2p1/8/2PNP3/2N1B3/PP3PPP/R2QKB1R w KQkq - 5 8. What is the best move?,pawn on h2 to h4
+Black to move. Position is r2qk2r/ppp3b1/2np2pp/5b2/2P4P/2N1B3/PP1QBPP1/R3K2R b KQkq - 1 12. What is the best move?,queen on d8 to f6
+White to move. Position is r1bqk1nr/pppp1ppp/2n5/4p3/1bB1P3/5N2/P1PP1PPP/RNBQK2R w KQkq - 0 5. What is the best move?,pawn on c2 to c3
+Black to move. Position is r5k1/2q2p1p/4b1p1/2n1p1b1/1pN1P3/1P4N1/2P1BQPP/3R2K1 b - - 0 24. What is the best move?,rook on a8 to a2
+White to move. Position is rn1q1rk1/pp2ppbp/6p1/3pNb2/3P4/2n1B1P1/PP2PPBP/R2Q1RK1 w - - 0 11. What is the best move?,pawn on b2 captures knight on c3
+Black to move. Position is r2q1rk1/pp1bppbp/2np1np1/8/2PNP3/2N1B3/PP1QBPPP/R4RK1 b - - 7 10. What is the best move?,knight on c6 captures knight on d4
+White to move. Position is r1bq1rk1/1pp1ppbp/p1np1np1/8/2PPP3/2N1BP2/PP2N1PP/R2QKB1R w KQ - 0 8. What is the best move?,queen on d1 to d2
+Black to move. Position is r2qr1k1/pppn2pp/5pb1/2P1p3/1P6/P1B1PP2/1Q2B1PP/R4RK1 b - - 0 17. What is the best move?,bishop on g6 to f7
+Black to move. Position is 2rqk2r/pb2bppp/1pn1p3/2p5/3P4/P1PBPN2/1B2QPPP/R4RK1 b k - 5 13. What is the best move?,castling kingside
+Black to move. Position is r2qkb1r/pp2pppp/2n5/3n4/3P4/1QN2P2/PP3P1P/R1B1KB1R b KQkq - 0 9. What is the best move?,pawn on e7 to e6
+Black to move. Position is 8/5k2/5p2/5rp1/R7/8/3RKP2/6r1 b - - 34 55. What is the best move?,rook on f5 to e5
+White to move. Position is 5R2/3r1pp1/2kp1b2/1p2pP1p/1PP1P3/3KB3/6PP/8 w - - 1 34. What is the best move?,rook on f8 to b8
+White to move. Position is r2qk2r/2p1bppp/p3n3/1p2P3/4N3/4Bn2/PP3PPP/R2Q1RK1 w kq - 0 15. What is the best move?,queen on d1 captures knight on f3
+White to move. Position is 2rq4/1k4p1/1prp1p1p/p3pP2/P1P1P1PP/1P3Q2/4K1R1/3R4 w - - 2 36. What is the best move?,king on e2 to d3
+Black to move. Position is r1bqkbnr/1ppp1ppp/p1n5/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 1 4. What is the best move?,knight on g8 to f6
+Black to move. Position is rnbqkb1r/pppp1ppp/4pn2/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 3. What is the best move?,pawn on d7 to d5
+White to move. Position is r1bqk2r/pppp1ppp/5n2/4n3/2P5/2N3P1/PP1PPK1P/R1BQ1B1R w kq - 0 7. What is the best move?,pawn on e2 to e4
+Black to move. Position is 8/R5kp/6p1/2p1rb2/P1P4P/2K2p2/7P/5B2 b - - 3 32. What is the best move?,king on g7 to h6
+White to move. Position is 6k1/5p2/6p1/8/7p/8/6PP/6qK w - - 0 41. What is the best move?,king on h1 captures queen on g1
+Black to move. Position is rnbqkb1r/pppppppp/5n2/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2. What is the best move?,pawn on e7 to e6
+Black to move. Position is r2qr1k1/pb3pbp/np1n2p1/2pP4/5B1P/1PN3P1/P2QNPB1/3R1RK1 b - - 0 17. What is the best move?,bishop on g7 to e5
+Black to move. Position is rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3. What is the best move?,knight on g8 to f6
+White to move. Position is r1b1kb1r/1pq2ppp/p1n2n2/3pN3/2pP4/2N1P3/PP2BPPP/R1BQ1RK1 w kq - 2 10. What is the best move?,pawn on e3 to e4
+Black to move. Position is r1b2rk1/pp1n1pbp/q1p1n1p1/2p1P3/N3PB2/5NPP/PPQ2PB1/R2R2K1 b - - 8 15. What is the best move?,pawn on b7 to b5
+Black to move. Position is 3rb3/p1q1kp2/1p2pn1p/2pr2p1/3B1P2/Q1P3P1/PPB4P/1K1RR3 b - - 2 24. What is the best move?,bishop on e8 to c6
+Black to move. Position is rn3rk1/p4ppp/1p1q4/3N2b1/3p1P2/6P1/PP2P1BP/2RQ1RK1 b - - 0 17. What is the best move?,bishop on g5 to h6
+Black to move. Position is rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2. What is the best move?,pawn on e7 to e6
+Black to move. Position is rnbqk1nr/ppppppbp/6p1/8/2P5/6P1/PP1PPPBP/RNBQK1NR b KQkq - 2 3. What is the best move?,pawn on c7 to c5
+Black to move. Position is r1bq1rk1/pppn1ppp/4pn2/3p4/2PP4/2NBPN2/PP1Q1PPP/R3K2R b KQ - 4 8. What is the best move?,pawn on d5 captures pawn on c4
+Black to move. Position is r1bqk1nr/pp2ppbp/2np2p1/2p5/2P5/2N1P1P1/PP1PNPBP/R1BQK2R b KQkq - 2 6. What is the best move?,knight on g8 to f6
+White to move. Position is r1b5/1p1nN1rp/1p1R1n2/6pk/4P3/2N1P1R1/PP5P/6K1 w - - 10 25. What is the best move?,rook on g3 to h3
+White to move. Position is r1br2k1/pp3p1p/4pp2/2p1n3/2P5/1P1PP1PP/qB2Q1B1/2R2RK1 w - - 0 18. What is the best move?,rook on f1 captures pawn on f6
+White to move. Position is r1bqkbnr/1pp2ppp/p1np4/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 5. What is the best move?,pawn on c2 to c3
+Black to move. Position is rn1qkb1r/p2p1ppp/bp2pn2/2pP4/2P5/P4N2/1PQ1PPPP/RNB1KB1R b KQkq - 2 6. What is the best move?,pawn on e6 captures pawn on d5
+Black to move. Position is r1q2rk1/pp1bbppp/3ppn2/5P2/3BP3/1BN5/PPP3PP/R2Q1RK1 b - - 0 12. What is the best move?,pawn on b7 to b5
+Black to move. Position is r1bqk2r/1pppbppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQR1K1 b kq - 5 6. What is the best move?,pawn on b7 to b5
+White to move. Position is r2q1rk1/pp1bbppp/2n1pn2/8/2BP4/P1N1BN2/1P3PPP/R2Q1RK1 w - - 5 11. What is the best move?,rook on f1 to e1
+White to move. Position is 4r2k/Q5b1/2p5/4q3/N1P1P1p1/5rP1/PP3P2/K2R2B1 w - - 1 34. What is the best move?,rook on d1 to c1
+White to move. Position is r1b2bnr/ppp1qk2/2n4p/3P4/3P1p1P/2N3p1/PPP2KP1/R1BQ1B1R w - - 0 11. What is the best move?,king on f2 to g1
+Black to move. Position is rnbqkb1r/pp3ppp/3p1n2/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 6. What is the best move?,pawn on g7 to g6
+Black to move. Position is r1bq1r1k/1pp3np/p2p2p1/3Pp3/2P1N3/4QN1P/PP3PP1/3RR1K1 b - - 0 24. What is the best move?,pawn on b7 to b6
+Black to move. Position is rnbqk2r/pppp1ppp/4pn2/8/1bPP4/5N2/PP1BPPPP/RN1QKB1R b KQkq - 3 4. What is the best move?,bishop on b4 captures bishop on d2
+White to move. Position is rn4k1/ppp2R1p/3pb1p1/3n4/2P5/2NB2P1/PP5P/R5K1 w - - 0 22. What is the best move?,knight on c3 captures knight on d5
+Black to move. Position is r1bq1rk1/p1p2ppp/2pb1n2/6B1/3P4/2N2N2/PP3PPP/R2Q1RK1 b - - 1 12. What is the best move?,rook on f8 to e8
+Black to move. Position is r2q2k1/pp2prbp/6p1/n1p5/3PP1P1/2P1B3/P3N1PP/R2Q1RK1 b - - 0 13. What is the best move?,rook on f7 captures rook on f1
+White to move. Position is r1bq1rk1/3nbppp/p2p4/3np3/Pp2P3/5N1P/1PP1BPP1/R1BQR1K1 w - - 0 13. What is the best move?,queen on d1 captures knight on d5
+Black to move. Position is rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1. What is the best move?,pawn on d7 to d5
+Black to move. Position is r1bq1rk1/ppp1n1bp/4n1p1/3Pp3/8/2PPNN2/PPB2PP1/R1BQK2R b KQ - 0 14. What is the best move?,knight on e7 captures pawn on d5
+Black to move. Position is r2q1rk1/pbpnbppp/1p6/3p3n/3P4/P1N1BNP1/1P2PPBP/R2Q1RK1 b - - 8 11. What is the best move?,pawn on c7 to c6
+Black to move. Position is r5k1/p2n1ppp/5n2/8/1P1B3q/3pP1NP/3Q1PP1/2R3K1 b - - 1 25. What is the best move?,knight on f6 to e4
+Black to move. Position is 4rn1k/1p4p1/p1pqp2p/8/6QP/1BP1R1P1/PP3PK1/8 b - - 3 28. What is the best move?,pawn on c6 to c5
+Black to move. Position is r2qr1k1/5pp1/p2b1n1p/3P1b2/Np6/3n1BB1/PP1Q1PPP/1N1R1RK1 b - - 3 20. What is the best move?,rook on a8 to c8
+Black to move. Position is r2qr1k1/1bpn1pb1/p2p1npp/1p2p3/P2PP3/2P2NNP/1PBB1PP1/R2QR1K1 b - - 0 17. What is the best move?,knight on d7 to b6
+White to move. Position is 1r1q1rk1/pb3ppp/8/1p6/1b1P2n1/2NB1N2/PP4PP/R2Q2KR w - - 4 16. What is the best move?,pawn on h2 to h3
+Black to move. Position is r2qnrk1/1p4bp/3pb1p1/p3p3/Pn2P3/B3NNP1/5PBP/1R1Q1RK1 b - - 1 16. What is the best move?,bishop on g7 to h6
+White to move. Position is 1r2k2r/pbppnppp/1bn5/4Pq2/Q1B1N3/B1Pp1N2/P4PPP/R3R1K1 w k - 7 16. What is the best move?,bishop on c4 captures pawn on d3
+Black to move. Position is r7/p1B3kp/2n3p1/1p1Pp1P1/4P2P/6N1/P5P1/5K2 b - - 1 37. What is the best move?,rook on a8 to c8
+White to move. Position is 3r1r2/2q2pk1/3p2pp/ppbQp3/4P1PP/PBP2P2/1P6/1K1R3R w - - 1 26. What is the best move?,rook on h1 to f1
+Black to move. Position is r1b2rk1/pp3pbp/n4np1/q1pP4/2Q5/P1N2N2/1P2BPPP/R1B2RK1 b - - 0 12. What is the best move?,bishop on c8 to f5
+White to move. Position is r4rk1/3qb1pp/p3p3/1b1p1p1n/1p1P4/6PP/PP1BPPBK/1NRQ1R2 w - - 2 19. What is the best move?,bishop on g2 to f3
+White to move. Position is rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2. What is the best move?,pawn on c2 to c4
+Black to move. Position is rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2. What is the best move?,knight on b8 to c6
+Black to move. Position is r2q1rk1/2pb1pbp/p2p1npB/7P/2pNP3/2N2P2/PPPQ2P1/2KR3R b - - 0 15. What is the best move?,bishop on g7 to h8
+White to move. Position is rnbqk2r/pppp1pp1/4pn1p/6B1/1bPP4/2N5/PP2PPPP/R2QKBNR w KQkq - 0 5. What is the best move?,bishop on g5 to h4
+White to move. Position is rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2. What is the best move?,pawn on c2 to c4
+White to move. Position is rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4. What is the best move?,pawn on c4 captures pawn on d5
+White to move. Position is rnbqkb1r/pp3ppp/2p1pn2/6B1/2pP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 6. What is the best move?,pawn on e2 to e4
+Black to move. Position is 2b3nr/1pp2k2/1p5p/3P4/r2P1p1P/6p1/PP2B1P1/R1B3KR b - - 0 18. What is the best move?,rook on a4 captures pawn on d4
+White to move. Position is 5n1k/1p1r2p1/p1pqp2p/8/6QP/1BP2RP1/PP3PK1/8 w - - 6 30. What is the best move?,pawn on a2 to a4
+Black to move. Position is bqr2r1k/4bppp/pn2p3/1p1pP3/3NNPP1/P4B2/1PP2Q1P/2B1RR1K b - - 0 20. What is the best move?,pawn on d5 captures knight on e4
+Black to move. Position is r1bqk2r/pppn1ppp/5n2/3p2B1/Q2P4/2P2N2/P3PPPP/R3KB1R b KQkq - 0 8. What is the best move?,pawn on h7 to h6
+White to move. Position is r3r1k1/1ppbqppp/2n2n2/2b1pPB1/p1N1P1P1/2P2N1P/PPB1Q1K1/R6R w - - 5 19. What is the best move?,knight on c4 to e3
+Black to move. Position is rnbqk2r/pp1p1pp1/4pn1p/2pP4/1bP4B/2N5/PP2PPPP/R2QKBNR b KQkq - 0 6. What is the best move?,bishop on b4 captures knight on c3
+Black to move. Position is rnbk1n1r/pp2q2p/2p2p1R/3pp3/3P1N1Q/2N5/PPP2PP1/2K1RB2 b - - 1 15. What is the best move?,knight on b8 to d7
+White to move. Position is r4rk1/1pq2ppp/pn6/R3p2n/1P2P1b1/2PB1N2/1B2QPPP/5RK1 w - - 5 17. What is the best move?,bishop on b2 to c1
+Black to move. Position is rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N2P2/PP4PP/R1BQKBNR b KQkq - 0 5. What is the best move?,castling kingside
+Black to move. Position is r4rk1/ppp3bp/1n2p1p1/n2pPq2/3P4/2P2N2/PP3RPP/R1BQ1NK1 b - - 1 18. What is the best move?,pawn on c7 to c5
+Black to move. Position is 1r1r2k1/2qbnppp/ppn1p3/5P2/2B1P3/1N2B3/PP3QPP/2R2RK1 b - - 0 18. What is the best move?,pawn on e6 captures pawn on f5
+White to move. Position is rnb1k1nr/ppq3pp/4p3/2ppPp2/3P2Q1/P1P5/2P2PPP/R1B1KBNR w KQkq f6 0 8. What is the best move?,queen on g4 to g3
+Black to move. Position is rnbqkbnr/1pp1pppp/p7/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4. What is the best move?,knight on g8 to f6
+White to move. Position is 1rr5/3kp1b1/p1ppb1p1/N4n1p/1P1P4/P1N1B2P/3RKPP1/2R5 w - - 10 32. What is the best move?,king on e2 to d3
+White to move. Position is 4r2k/p5b1/3pN2p/5P2/3p2P1/8/PP1p1N1P/2r2RK1 w - - 4 30. What is the best move?,knight on f2 to d1
+White to move. Position is r7/pbp2Bk1/1p4p1/7p/7P/2P1rP2/P5P1/3R1RK1 w - - 0 26. What is the best move?,rook on d1 to d7
+White to move. Position is r2qk2r/pppbbppp/3p1n2/1B6/3nP3/2N5/PPP2PPP/R1BQR1K1 w kq - 0 9. What is the best move?,bishop on b5 captures bishop on d7
+Black to move. Position is 8/2p3p1/1p1p4/3P1k1p/1PP2r2/3K4/2R4P/8 b - - 3 53. What is the best move?,rook on f4 to f3
+Black to move. Position is 5rk1/ppQ2p1p/3p2p1/3Pn3/8/4R1PP/q4P2/5BK1 b - - 1 29. What is the best move?,queen on a2 captures pawn on d5
+White to move. Position is r2q1rk1/pbpnbpp1/1p3n1p/3p4/3P3B/2N1PN2/PP2BPPP/2RQK2R w K - 2 11. What is the best move?,castling kingside
+Black to move. Position is 5k2/8/P5p1/2p2n1p/2P1BQ1P/3P3K/8/6q1 b - - 1 44. What is the best move?,queen on g1 to a1
+Black to move. Position is r2qrbk1/1bp2ppp/p1np1n2/1p2p3/P2PP3/1BP2N1P/1P1N1PP1/R1BQR1K1 b - - 0 12. What is the best move?,pawn on h7 to h6
+Black to move. Position is 1r1q1rk1/1ppnnpb1/p2pp2p/6p1/3PP3/1QPB1NB1/PP3PPP/3RR1K1 b - - 1 14. What is the best move?,pawn on e6 to e5
+White to move. Position is r1bq1rk1/pp1nbppp/2p1pn2/3p2B1/2PP4/2N1PN2/PP3PPP/2RQKB1R w K - 0 8. What is the best move?,queen on d1 to c2
+Black to move. Position is 3R4/q3r2k/1p3Qpp/8/P7/5BP1/1r2PP1P/6K1 b - - 1 31. What is the best move?,rook on e7 to e8
+Black to move. Position is r1b2b1r/1p5p/p4nk1/q3nN2/4P3/1Q2B3/PP2NPPP/2R2RK1 b - - 8 16. What is the best move?,pawn on h7 to h6
+White to move. Position is rnbqkb1r/pp2pppp/3p1n2/2p5/4P3/2P2N2/PP1P1PPP/RNBQKB1R w KQkq - 1 4. What is the best move?,queen on d1 to c2
+White to move. Position is rnb1kn1r/pp2q2p/2p1pp2/3p4/3P1NQ1/2N5/PPP2PP1/2KR1B1R w kq - 0 13. What is the best move?,rook on d1 to e1
+White to move. Position is r1bqkbnr/p4p1p/2pp4/2p1p1p1/4P3/2P2N2/PP1P1PPP/RNBQ1RK1 w kq - 0 7. What is the best move?,pawn on d2 to d4
+Black to move. Position is 2r1k3/pb2b1P1/1pn1p3/7p/2q5/P1B2N1Q/1P3PPP/4R1K1 b - - 0 28. What is the best move?,king on e8 to d7
+Black to move. Position is rnbqkb1r/pppppp1p/5np1/8/2P1P3/2N5/PP1P1PPP/R1BQKBNR b KQkq - 0 3. What is the best move?,pawn on c7 to c5
+Black to move. Position is r1bq1rk1/ppp3bp/3p2p1/2nPpp1n/2P1P3/2N1BP2/PPBQ2PP/2KR2NR b - - 5 11. What is the best move?,pawn on b7 to b6
+Black to move. Position is r1b3r1/1p1nN2p/1p5k/5Rp1/4P1n1/2N1P3/PP5P/3R2K1 b - - 1 20. What is the best move?,rook on g8 to g7
+Black to move. Position is rq4k1/3n1pp1/2p2bb1/pp5p/3P3P/PBN1QN2/1P3PP1/4R1K1 b - - 3 24. What is the best move?,pawn on b5 to b4
+Black to move. Position is r5k1/2R2p1p/6p1/pp6/2b5/P4P2/5K2/1R6 b - - 3 35. What is the best move?,pawn on a5 to a4
+White to move. Position is 4r3/ppp4p/5kp1/1bP5/7P/1P3BP1/P1R1P1K1/8 w - - 4 36. What is the best move?,king on g2 to f2
+Black to move. Position is r1r3k1/1q3ppp/3Rpb2/p3N3/PpN1P3/1Pn2Q2/5PPP/4R1K1 b - - 4 25. What is the best move?,bishop on f6 captures knight on e5
+Black to move. Position is b1r3k1/4np1p/3N2p1/1r6/1p2P2q/1Pb1B2P/R1P2QB1/5R1K b - - 5 33. What is the best move?,queen on h4 captures queen on f2
+White to move. Position is 2nq1k1r/r2pb3/2p2pQp/1p5P/1P6/P5P1/1B3P2/3RR1K1 w - - 2 26. What is the best move?,bishop on b2 to c1
+White to move. Position is rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2. What is the best move?,pawn on c2 to c4
+White to move. Position is qrr3k1/4bpp1/2b1pnnp/1p1p4/1P2PP2/2N1BBPP/P1RNQ2K/3R4 w - - 0 27. What is the best move?,pawn on e4 captures pawn on d5
+Black to move. Position is r1b2rk1/pp2qppp/2n5/8/4N3/1Q2P1P1/PP2BPP1/2R1K2R b K - 0 16. What is the best move?,queen on e7 captures knight on e4
+Black to move. Position is r2q1rk1/1ppb2b1/n2p1ppn/p2Pp2p/2P1P2B/P1N4P/1P1NBPP1/1R1QK2R b K - 2 14. What is the best move?,knight on a6 to c5
+Black to move. Position is rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N1B3/PPP2PPP/R2QKB1R b KQkq - 1 6. What is the best move?,pawn on e7 to e5
+Black to move. Position is 8/6k1/4R1pp/4p3/r5P1/3PK2P/8/8 b - - 1 36. What is the best move?,rook on a4 to a1
+Black to move. Position is r1bqnr2/pp1ppkbp/4N1p1/n3P3/8/2N1B3/PPP2PPP/R2QK2R b KQ - 1 11. What is the best move?,pawn on d7 captures knight on e6
+Black to move. Position is rnbqkb1r/pp2pppp/3p1n2/2p5/4P3/2N3P1/PPPPNP1P/R1BQKB1R b KQkq - 0 4. What is the best move?,pawn on g7 to g6
+Black to move. Position is r2nkn1r/1p1bbppp/1q2p3/p2pP3/NP1P4/P2BBN2/5PPP/R2Q1K1R b kq - 1 15. What is the best move?,bishop on d7 captures knight on a4
+Black to move. Position is 1r6/3npp1k/b1Np1npP/3PP3/5P2/1p2R3/2r2NBP/1R5K b - - 0 32. What is the best move?,rook on b8 to b6
+White to move. Position is br4k1/2q2pb1/6pp/1BnnN3/3N4/7P/1BQ2PP1/4R1K1 w - - 4 29. What is the best move?,bishop on b5 to f1
+White to move. Position is rnbqk2r/ppp2pp1/5n1p/3p2B1/1b1P4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7. What is the best move?,bishop on g5 to h4
+White to move. Position is r1bqk1nr/pppp1ppp/1bn5/8/2BPP3/5N2/P4PPP/RNBQK2R w KQkq - 1 8. What is the best move?,castling kingside
+White to move. Position is r1bq1rk1/2p2pbp/1p1p1np1/p1nPp3/2P1P3/2N5/PPQ1BPPP/R1B1NRK1 w - - 0 11. What is the best move?,bishop on c1 to g5
+White to move. Position is r1bqnrk1/pp1pppbp/6p1/n3P3/3N4/1BN1B3/PPP2PPP/R2QK2R w KQ - 1 10. What is the best move?,bishop on b3 captures pawn on f7
+Black to move. Position is rnb1kb1r/pp1p1ppp/1q2p3/8/3PnB2/1Q3N2/PP2PPPP/RN2KB1R b KQkq - 4 7. What is the best move?,queen on b6 captures queen on b3
+White to move. Position is r1b2rk1/p3pnbp/q1pp1pp1/8/Q1NPP3/2N5/PP3PPP/R1B1R1K1 w - - 6 14. What is the best move?,knight on c4 to a5
+White to move. Position is rnbq1rk1/ppp1ppbp/5np1/3p4/3P1P2/2P1PN2/PP4PP/RNBQKB1R w KQ - 1 6. What is the best move?,bishop on f1 to d3
+White to move. Position is r1bqkb1r/pp3ppp/2n5/2pn4/3p1N2/6P1/PPPP1PBP/R1BQK2R w KQkq - 0 9. What is the best move?,knight on f4 captures knight on d5
+White to move. Position is 4rrk1/pb3pbp/1p6/n2p4/6Q1/P2B4/3B1PPP/6K1 w - - 0 25. What is the best move?,bishop on d2 to h6
+White to move. Position is r2q1rk1/p2nbppp/Qp3n2/2pp2B1/3P4/2N1PN2/PP3PPP/2R1K2R w K - 0 12. What is the best move?,castling kingside
+White to move. Position is 1r3rk1/2q1bppp/3pb3/p3p1PP/1p2P3/3BBP2/PPPQ4/1K4RR w - - 0 22. What is the best move?,pawn on g5 to g6
+Black to move. Position is 2r2rk1/1p1n1pp1/p2qb2p/3p1N2/8/1P1BP2P/PQ3PP1/2R2RK1 b - - 2 20. What is the best move?,bishop on e6 captures knight on f5
+Black to move. Position is r1n1qrk1/pp3pb1/2p2R1p/4PQ2/3p4/3B3P/PPP1N1P1/R5K1 b - - 3 22. What is the best move?,knight on c8 to e7
+Black to move. Position is 8/1b2kp1p/p2bppq1/8/3P4/2P1BP1P/P4K2/R2RN3 b - - 2 28. What is the best move?,bishop on b7 to d5
+Black to move. Position is 2r3k1/6pp/5p2/p7/nbP1P1PP/3r1P2/K1RN1B2/3R4 b - - 0 35. What is the best move?,knight on a4 to c3
+White to move. Position is 4rbk1/1pqb1pp1/n1pp1r1p/2n2N2/p1P1P1P1/2N1B1QP/PP3PBK/2RR4 w - - 0 21. What is the best move?,bishop on e3 to f4
+Black to move. Position is r5k1/2b2n1p/4p1p1/p7/RP6/P1B2NP1/5PK1/8 b - - 2 41. What is the best move?,king on g8 to f8
+Black to move. Position is rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1. What is the best move?,pawn on c7 to c5
+White to move. Position is 2r1k2r/1q1nbp2/p5pp/3Pp1B1/Pp2N1Q1/8/1P3PPP/R2R2K1 w k - 0 22. What is the best move?,bishop on g5 captures bishop on e7
+White to move. Position is r2q1rk1/p3bppp/Q4n2/2pp4/8/2N1PN2/PP3PPP/2R1K2R w K - 0 14. What is the best move?,castling kingside
+Black to move. Position is r4rk1/p2q1pp1/2pb1n2/3p1b2/8/1PN1P1P1/PB2BP2/R2QR1K1 b - - 0 17. What is the best move?,rook on a8 to e8
+White to move. Position is r1b1k2r/ppp1n1pp/3q4/2b1npN1/2Bp4/8/PPP2PPP/RNBQR1K1 w kq - 4 10. What is the best move?,bishop on c1 to f4
+White to move. Position is r1bqk2r/pppp1pp1/2n2n1p/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 0 6. What is the best move?,bishop on c1 to e3
+Black to move. Position is 1r3rk1/4R1pp/8/p3Q3/P4P2/8/1pq3PP/4R1K1 b - - 1 40. What is the best move?,queen on c2 to g6
+White to move. Position is rn1q1rk1/pbn2ppp/1pp2b2/3p1N2/4P3/2N3P1/PP3PBP/R1BQ1RK1 w - - 1 13. What is the best move?,pawn on e4 captures pawn on d5
+Black to move. Position is 2N3k1/p5p1/4p2p/7n/3B4/1r6/1n3PP1/1R4K1 b - - 0 34. What is the best move?,rook on b3 to b4
+Black to move. Position is 5r2/1B2p1bk/6p1/PNp2b2/2P3p1/4QpP1/7R/q3B1K1 b - - 5 40. What is the best move?,king on h7 to g8
+Black to move. Position is rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1. What is the best move?,pawn on d7 to d5
+Black to move. Position is 4r1k1/p3P3/5R2/5p2/7q/BP6/P5K1/8 b - - 5 43. What is the best move?,queen on h4 captures rook on f6
+White to move. Position is r3qk1n/3n2bQ/bp6/p2NPpN1/P2P4/8/1P4PP/R5K1 w - - 4 30. What is the best move?,queen on h7 captures pawn on f5
+Black to move. Position is 1r1r2k1/5p2/6pp/1p1Np3/4P3/1P3P2/2PR1KPP/8 b - - 1 33. What is the best move?,king on g8 to f8
+White to move. Position is rnbqk2r/ppp2p1p/5n2/3Pb3/2B2ppP/8/PPPP2P1/RNBQ1RK1 w kq - 0 9. What is the best move?,pawn on d2 to d4
+Black to move. Position is r7/pp3p2/n5p1/q1pPQb2/8/P1P1k3/4B1PP/5RK1 b - - 3 23. What is the best move?,king on e3 to d2
+White to move. Position is 6k1/p4p2/1p3qp1/2p5/P5Bp/1P4P1/3rQb1P/5R1K w - - 2 32. What is the best move?,queen on e2 to e8
+Black to move. Position is 1r3rk1/p3pp1p/2p3p1/3p1b2/Q1Pq4/4P1P1/P4PBP/2R2RK1 b - - 0 17. What is the best move?,queen on d4 to f6
+White to move. Position is rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3. What is the best move?,knight on b1 to c3
+Black to move. Position is r1b2rk1/pp1nq1pp/2p5/2bP3Q/2P1pp2/2B5/PPR2PPP/4KBNR b K - 1 16. What is the best move?,knight on d7 to f6
+Black to move. Position is r1b2rk1/pp1nq1pp/8/2bpPp2/5P2/P1NP1N1Q/1P5P/R1B1K2R b KQ - 0 14. What is the best move?,bishop on c5 to b6
+Black to move. Position is 1k1bb2r/pP3pp1/1n2p2p/q5P1/7R/1B1N1N2/1PP1QPP1/1K6 b - - 0 29. What is the best move?,rook on h8 to f8
+White to move. Position is 5R1Q/8/8/5b2/5k2/1K3p2/2q5/8 w - - 4 63. What is the best move?,king on b3 to b4
+Black to move. Position is 3R4/8/6k1/5p2/3Pp2P/5r1P/6K1/8 b - - 2 42. What is the best move?,rook on f3 to d3
+White to move. Position is r3qrk1/pbn1bpp1/1p5p/2ppPB2/6Q1/2N1P1B1/PP3PPP/R4RK1 w - - 5 16. What is the best move?,bishop on f5 to d7
+Black to move. Position is 1k4r1/pp3pP1/8/2P2Q2/1n1bRK1p/3P2P1/1q3P2/6NR b - - 2 25. What is the best move?,queen on b2 captures pawn on f2
+White to move. Position is r1b5/ppQn2kp/8/5Rp1/1q1pN3/3B4/PP4PP/6K1 w - - 1 22. What is the best move?,rook on f5 captures pawn on g5
+Black to move. Position is 6k1/5p2/3b2pp/3Pp3/4P1N1/3p3P/5PP1/5K2 b - - 1 36. What is the best move?,pawn on h6 to h5
+White to move. Position is r3kb1r/1p1bpppp/1pn5/3p4/3P4/4PN2/PP1B1PPP/R3KB1R w KQkq - 3 11. What is the best move?,knight on f3 to e5
+Black to move. Position is 2k5/4nR2/4P3/1Pq2p2/3R2r1/P3QN1K/2r4P/8 b - - 0 41. What is the best move?,rook on g4 to g8
+White to move. Position is rnbqk2r/ppppppbp/5np1/8/8/5NP1/PPPPPPBP/RNBQK2R w KQkq - 2 4. What is the best move?,pawn on c2 to c4
+White to move. Position is r2q1rk1/1b1nbpp1/p1p1pn1p/1p6/3P1B2/P1N1PN1P/BP3PP1/2RQK2R w K - 2 13. What is the best move?,castling kingside
+Black to move. Position is r3r1k1/pp3nPp/1q1p1B2/2bP4/8/P5N1/1P3PK1/R2Q1R2 b - - 0 25. What is the best move?,rook on e8 to e5
+White to move. Position is rnb3k1/pppq1r1p/3pNnp1/3Pp3/2P5/2NB1PP1/PP5P/R1Q2RK1 w - - 1 18. What is the best move?,pawn on f3 to f4
+Black to move. Position is 3rr1k1/1p3ppp/p1n5/2Pp1q2/3P4/1PQ1B2P/R4PP1/4R1K1 b - - 1 24. What is the best move?,rook on e8 to e7
+White to move. Position is 2rqr2k/1p2b1p1/p1n1pn1p/3p4/Q7/P1N1B1P1/1P2PPBP/3R1R1K w - - 0 17. What is the best move?,queen on a4 to h4
+Black to move. Position is r1bq1rk1/pp2bppp/2n1p3/2p5/2P3n1/1P1PPNP1/PB2Q1BP/RN3RK1 b - - 2 11. What is the best move?,bishop on e7 to g5
+White to move. Position is r5k1/q4p1p/3p2n1/3P1Q2/1p2Pp2/7P/P4RP1/3B3K w - - 4 32. What is the best move?,rook on f2 to e2
+Black to move. Position is r1bqrnk1/ppp1bNp1/7p/2P5/3P4/3Q1N2/PPB1p1PP/R4RK1 b - - 0 16. What is the best move?,pawn on e2 captures rook on f1b and promotes to bishop
+White to move. Position is 1bB5/1P2rp2/R5p1/4p3/4P3/1K3Pk1/1P6/8 w - - 3 49. What is the best move?,rook on a6 to a8
+White to move. Position is 2kr2nr/1pp2ppp/p1p5/8/1b2P3/2N1B3/PPP1bPPP/R3K2R w KQ - 0 11. What is the best move?,king on e1 captures bishop on e2
+Black to move. Position is 2rqk2r/1b1n1pp1/p2p1b2/3NpP1p/1p2P2P/1B4N1/PPP3P1/R2Q1RK1 b k - 1 16. What is the best move?,bishop on f6 captures pawn on h4
+White to move. Position is 2b3k1/6p1/2r1p2p/2b5/5q2/1Q6/P1R2PPP/5RK1 w - - 6 25. What is the best move?,pawn on h2 to h3
+Black to move. Position is r1bqk2r/ppp2ppp/2nb4/8/3NB3/8/PPP2PPP/R1BQK2R b KQkq - 0 9. What is the best move?,castling kingside
+Black to move. Position is 3rkb1r/ppq3pp/2p1bp2/P3n3/5B2/2N3P1/1P2PPBP/R1Q2RK1 b k - 0 15. What is the best move?,pawn on a7 to a6
+White to move. Position is r1r1k3/pp1qn2p/5pp1/3p2N1/6Q1/8/PP3PPP/2R1R1K1 w - - 2 22. What is the best move?,rook on e1 captures knight on e7
+White to move. Position is 4k3/2pr2pp/1b2p3/1p2p1B1/1P3n2/1NP1nP2/1K4PP/R3N3 w - - 2 29. What is the best move?,pawn on g2 to g3
+White to move. Position is r4rk1/1p1bqppp/1np1pn2/p3N3/PbpPP3/2N1B1P1/1P2QPBP/R2R2K1 w - - 8 14. What is the best move?,bishop on e3 to f4
+Black to move. Position is r1bq1rk1/pppn1ppp/5n2/3p2B1/Q2P4/2P1PN2/P4PPP/R3KB1R b KQ - 0 9. What is the best move?,pawn on h7 to h6
+Black to move. Position is r1bqkbnr/1ppp1ppp/p1B5/4p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 4. What is the best move?,pawn on d7 captures bishop on c6
+Black to move. Position is r1bq1rk1/1pp1ppbp/p1np1np1/8/2PPP2P/2N1BP2/PP2N1P1/R2QKB1R b KQ - 0 8. What is the best move?,pawn on h7 to h5
+White to move. Position is 2q2knr/1br1bppp/1Qn5/1BppN3/3P4/2P5/PP3PPP/RNB1R1K1 w - - 1 13. What is the best move?,knight on e5 captures knight on c6
+White to move. Position is r2q1rk1/1b3pbp/pp3nn1/2p1p1N1/2B1P3/2P1B3/PP1NQPP1/2KR3R w - - 0 15. What is the best move?,knight on g5 captures pawn on h7
+Black to move. Position is rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2. What is the best move?,knight on b8 to c6
+White to move. Position is r1bq1rk1/3nbppp/p1pp1n2/1p2p3/2PPP3/1B3N1P/PP3PP1/RNBQR1K1 w - - 0 12. What is the best move?,bishop on c1 to e3
+Black to move. Position is 3rr1k1/p4pbp/Q5q1/2NP1bp1/4pn2/2N1B3/PP3PPP/R1R3K1 b - - 0 23. What is the best move?,queen on g6 to h5
+White to move. Position is r1bk3r/p2nppbp/np4p1/2p5/2P1P3/2N1BP2/PP2N1PP/2KR1B1R w - - 2 11. What is the best move?,pawn on g2 to g3
+Black to move. Position is r1bq1rk1/pppnbppp/4pn2/6B1/2BP4/2N1PN2/PP3PPP/R2QK2R b KQ - 0 8. What is the best move?,pawn on c7 to c5
+White to move. Position is r3k2r/p1p2ppp/2p5/4P3/2Q1p3/4PqPb/PPP4P/RN4KR w kq - 5 18. What is the best move?,queen on c4 captures pawn on c6
+Black to move. Position is r1bq1rk1/2p1bppp/p1np1n2/1p6/3PP3/1B3N2/PP2QPPP/RNB2RK1 b - - 0 10. What is the best move?,bishop on c8 to g4
+Black to move. Position is r3r3/p4p1k/1p3Bpp/3bP3/2B5/2P4R/P4PPP/4R1K1 b - - 0 25. What is the best move?,bishop on d5 captures bishop on c4
+White to move. Position is rnbqkbnr/pp2pppp/2p5/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3. What is the best move?,knight on b1 to c3
+White to move. Position is 2kr1b1r/p4p2/1n2pP2/q1pb2B1/1p1PN2P/2p1QP2/PP2B1P1/1K1R3R w - - 2 20. What is the best move?,pawn on a2 to a3
+Black to move. Position is 1Qb3k1/6p1/2r1p2p/q1b5/8/8/P1R2PPP/5RK1 b - - 3 23. What is the best move?,queen on a5 to a4
+Black to move. Position is r1bqkbnr/pp3ppp/2n5/1Bpp4/3P4/5N2/PPPN1PPP/R1BQK2R b KQkq - 3 6. What is the best move?,queen on d8 to e7
+White to move. Position is r1bqk2r/1pp2ppp/pn1bp3/n7/3PP3/P1NBBN2/1PQ2PPP/R3K2R w KQkq - 1 12. What is the best move?,rook on a1 to d1
+Black to move. Position is rnbqkb1r/pp3ppp/4pn2/2pP4/8/1P2PN2/P2P1PPP/RNBQKB1R b KQkq - 0 5. What is the best move?,pawn on e6 captures pawn on d5
+Black to move. Position is r7/pbp2Bk1/1p4p1/7p/4r2P/2P1QP2/P5P1/3R1RK1 b - - 0 25. What is the best move?,rook on e4 captures queen on e3
+Black to move. Position is 3k4/8/Q7/2pP4/2P2q2/8/2K5/8 b - - 32 84. What is the best move?,queen on f4 to e4
+Black to move. Position is rnbq1rk1/pp3pb1/3pPnpp/2p5/2P1PB2/2N5/PP2BPPP/R2QK1NR b KQ - 0 9. What is the best move?,bishop on c8 captures pawn on e6
+White to move. Position is 5rk1/p2bn1p1/B3p2p/4P3/1r6/3p1N2/P5PP/3RR1K1 w - - 0 24. What is the best move?,bishop on a6 captures pawn on d3
+Black to move. Position is rnbqkb1r/p1pp1ppp/1p2pn2/8/2PP4/5NP1/PP2PP1P/RNBQKB1R b KQkq - 0 4. What is the best move?,bishop on f8 to b4
+Black to move. Position is r1b2rk1/pp3ppp/2n1p3/4P3/3P1R2/2qB4/P1PN2PP/R2Q3K b - - 4 15. What is the best move?,pawn on f7 to f5
+White to move. Position is r2q1rk1/p2nbppp/B1b5/2pp4/8/1PB1PN2/P3QPPP/3R1RK1 w - - 2 16. What is the best move?,pawn on e3 to e4
+Black to move. Position is rnbq1rk1/pp3pbp/3pPnp1/2p5/2P1PP2/2N2N2/PP4PP/R1BQKB1R b KQ - 0 8. What is the best move?,pawn on f7 captures pawn on e6
+Black to move. Position is 6r1/p1n4R/1p3k2/2p1b3/2P2BB1/1P3K2/P6p/8 b - - 1 36. What is the best move?,rook on g8 to f8
+White to move. Position is 3b4/1bp4p/p3nNk1/1pp1Pp2/6p1/1PB5/P1P2PPP/5NK1 w - - 0 26. What is the best move?,bishop on c3 to b2
+Black to move. Position is rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2. What is the best move?,knight on b8 to c6
+Black to move. Position is rnbqk2r/1pp2pbp/1n1pp1p1/p3P1N1/P2P1P2/1B6/1PP3PP/RNBQK2R b KQkq - 0 9. What is the best move?,pawn on d6 captures pawn on e5
+Black to move. Position is 1r2r2k/pppb2pp/3q1n2/4bp2/8/2PP1BPP/PP1QPK2/R4NNR b - - 2 16. What is the best move?,pawn on c7 to c5
+Black to move. Position is r2q1rk1/pb6/1pN1pbBB/8/3p3P/2P4R/P3QPP1/R3K3 b Q - 0 21. What is the best move?,queen on d8 to c7
+Black to move. Position is rn1qk2r/1p2npbp/2ppb1p1/p3p3/P1P1P3/2NPB1P1/1P2NPBP/R2Q1RK1 b kq - 3 10. What is the best move?,pawn on h7 to h5
+White to move. Position is r3r1k1/pp4pp/5pn1/3p4/8/4N2P/PP2B1P1/R4RK1 w - - 1 21. What is the best move?,king on g1 to f2
+White to move. Position is rnbqk2r/1pp2ppp/p3pn2/8/1bBP4/2N1PN2/PP3PPP/R1BQK2R w KQkq - 0 7. What is the best move?,castling kingside
+White to move. Position is r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5. What is the best move?,castling kingside
+White to move. Position is 8/pp1kp1b1/3p4/4nbp1/2Pn1N2/8/PP1B1PP1/2RNKB1r w - - 0 24. What is the best move?,bishop on d2 to c3
+White to move. Position is rnbqk1nr/ppp1bppp/8/3p4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5. What is the best move?,bishop on c1 to f4
+White to move. Position is r2q1rk1/2p1bppp/p1n5/1p1pP3/4n1b1/1BP1BN2/PP1N1PPP/R2Q1RK1 w - - 1 12. What is the best move?,knight on d2 captures knight on e4
+Black to move. Position is 2r1k2r/pp3p2/2n2n1p/3p1qp1/Q3P3/3R2B1/PP3PPP/1K4NR b k - 0 17. What is the best move?,knight on f6 captures pawn on e4
+White to move. Position is 6k1/2q5/5Q2/2p5/2P4P/3P3K/8/8 w - - 5 53. What is the best move?,pawn on h4 to h5
+White to move. Position is 2rr2k1/p4ppp/1q6/3n4/2pN4/2R1P3/P3QPPP/3R2K1 w - - 1 22. What is the best move?,rook on c3 to c2
+White to move. Position is r1bqk2r/pp3ppp/4pb2/2p5/3P4/3Q1N2/PPP2PPP/R3KB1R w KQkq - 0 10. What is the best move?,queen on d3 to b5
+White to move. Position is 1nbqkb1r/r4ppp/p2ppn2/1p6/3NP3/2N2B2/PPP2PPP/R1BQ1RK1 w k - 2 9. What is the best move?,pawn on a2 to a4
+Black to move. Position is rn1q1rk1/pbp2ppp/1p2pn2/3p4/2PP4/P2BPN2/1P1B1PPP/R2Q1RK1 b - - 0 9. What is the best move?,pawn on d5 captures pawn on c4
+Black to move. Position is r2q1rk1/pp2bppp/1n2p3/3bP3/5B2/2N5/PPB1QPPP/3R1RK1 b - - 0 16. What is the best move?,queen on d8 to d7
+White to move. Position is r1bq1rk1/pp1n1pp1/2p1pb1p/8/2pP4/2NBPN2/PP3PPP/2RQ1RK1 w - - 0 11. What is the best move?,bishop on d3 captures pawn on c4
+White to move. Position is r5k1/1bq2pb1/pp4p1/3p2rp/2P1n3/N4B1P/PP3QPN/3RR1K1 w - - 1 32. What is the best move?,bishop on f3 captures knight on e4
+White to move. Position is rn1qkbnr/pp2pppp/2p3b1/8/8/5NN1/PPPP1PPP/R1BQKB1R w KQkq - 3 6. What is the best move?,pawn on h2 to h4
+White to move. Position is 8/1p2rk2/p3rp2/2Pp1q1p/1P1P2pP/n3B3/4RPP1/3QR1K1 w - - 11 37. What is the best move?,bishop on e3 to c1
+Black to move. Position is rn1qk2r/pp1b1pbp/3p1np1/2pP4/4PB2/1QN5/PP3PPP/R3KBNR b KQkq - 5 9. What is the best move?,castling kingside
+White to move. Position is r3k2r/1pqn1p2/2pbb1n1/p2p2p1/P2P2Pp/1P1NPP1P/3QB1K1/2R2NBR w kq - 6 28. What is the best move?,bishop on g1 to h2
+White to move. Position is rnbqkb1r/ppp2ppp/8/3np3/8/2N3P1/PPPP1P1P/R1BQKBNR w KQkq - 0 5. What is the best move?,knight on g1 to f3
+White to move. Position is rnbqk2r/pp3ppp/5n2/2bp4/8/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 0 8. What is the best move?,pawn on a2 to a3
+White to move. Position is 8/2p4p/p3nPk1/2p5/1p3p2/1P3p2/PBb2NPP/6K1 w - - 0 32. What is the best move?,pawn on g2 captures pawn on f3
+Black to move. Position is rnbq1rk1/2p1bppp/p2p1n2/1p2p3/3PP3/1BP2N1P/PP3PP1/RNBQR1K1 b - - 0 10. What is the best move?,knight on b8 to d7
+White to move. Position is r4rk1/p1pb1ppp/8/2ppP2q/8/Q3BPn1/PPP4P/RN2K2R w KQ - 4 17. What is the best move?,rook on h1 to g1
+White to move. Position is rnbqk2r/pp1pnpbp/2p3p1/4p3/2P5/2NP2P1/PP2PPBP/R1BQK1NR w KQkq - 0 6. What is the best move?,pawn on h2 to h4
+White to move. Position is 2b1r3/5pkp/p5p1/2p5/2P1P2P/2K5/P3B2P/7R w - - 0 25. What is the best move?,bishop on e2 to f3
+Black to move. Position is rnbqkbnr/pp1ppppp/2p5/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2. What is the best move?,pawn on d7 to d5
+Black to move. Position is r1bq1rk1/2pn2bp/p2p2p1/1P1Ppp1n/1P2P3/2N1BP2/P1BQN1PP/2KR3R b - - 0 14. What is the best move?,pawn on a6 captures pawn on b5
+White to move. Position is r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3. What is the best move?,pawn on d2 to d4
+White to move. Position is r1b1kb1r/pp3ppp/2n1pq2/8/2PP4/5N2/P4PPP/R1BQKB1R w KQkq - 1 10. What is the best move?,pawn on a2 to a3
+White to move. Position is 8/1p2rk2/5p2/pPPp3p/2nPr1pP/1Q2BqP1/4RP1K/4R3 w - - 0 41. What is the best move?,pawn on c5 to c6
+White to move. Position is rnbqk2r/ppp1bppp/4pn2/3p4/5P2/1P2P3/PBPP2PP/RN1QKBNR w KQkq - 2 5. What is the best move?,knight on g1 to f3
+White to move. Position is r1b3k1/6p1/P1n1p2p/q7/1b6/2p2B2/PP1Q1PPP/R4RK1 w - - 0 18. What is the best move?,pawn on b2 captures pawn on c3
+Black to move. Position is 1r6/6k1/2Rp2pp/p2np3/6P1/1P1P3P/P5K1/5R2 b - - 2 29. What is the best move?,knight on d5 to e3
+White to move. Position is 2rr2k1/pb1qbp1p/2n3p1/2p5/3p1B2/P1Q1PN2/1P2BPPP/R2R2K1 w - - 0 20. What is the best move?,queen on c3 to c2
+White to move. Position is r1bqk2r/pp1n1pp1/4pb1p/6B1/3N3P/8/PPPQ1PP1/R3KB1R w KQkq - 0 11. What is the best move?,bishop on g5 to e3
+Black to move. Position is 1r1q2k1/p1p1r1p1/1p2b2p/nBPp1p2/P2P4/4P1P1/2QN1P1P/1R1R2K1 b - - 7 24. What is the best move?,queen on d8 to f8
+Black to move. Position is r1b2rk1/p1q2pbp/1p2p1p1/n5B1/1Q1PN3/2P5/P3BPPP/3R1RK1 b - - 5 16. What is the best move?,bishop on c8 to b7
+Black to move. Position is rnbqkb1r/pppppp1p/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3. What is the best move?,bishop on f8 to g7
+White to move. Position is rnbqkb1r/pppp1ppp/4pn2/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3. What is the best move?,knight on b1 to c3
+Black to move. Position is 2r4k/5p1p/1qrpbnp1/p3p1b1/1P2P3/P3NB2/1P2QPPP/R3RNK1 b - - 0 23. What is the best move?,pawn on a5 captures pawn on b4
+Black to move. Position is r1bq1rk1/1p1pnppp/p1n1p3/8/2P1P3/1NQB4/PP3PPP/R1B2RK1 b - - 0 11. What is the best move?,pawn on d7 to d6
+White to move. Position is r4r1k/pq1P3p/np3bp1/2p3N1/2Q5/8/P4PPP/1R1R2K1 w - - 1 23. What is the best move?,knight on g5 to e6
+White to move. Position is 2k1r2r/pppq4/2nb1pp1/3p1n2/3P1P1p/2PQB2P/PP2N1PN/2KR1R2 w - - 2 21. What is the best move?,bishop on e3 to d2
+Black to move. Position is 2rq1r2/pp3pk1/1n1p2p1/5P2/4NP2/1B1Q4/PKP3P1/3R3R b - - 0 22. What is the best move?,rook on c8 captures pawn on c2
+Black to move. Position is r1bqk1nr/pppp1ppp/8/1Bb5/3pP3/3P4/PPP2PPP/RNBQ1RK1 b kq - 0 6. What is the best move?,pawn on c7 to c6
+Black to move. Position is rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2. What is the best move?,knight on b8 to c6
+Black to move. Position is 4r1k1/1bqnrpbp/pp1pp1p1/6P1/Pn2PP2/1NN1B2R/1PP2QBP/3R2K1 b - - 11 25. What is the best move?,pawn on f7 to f5
+Black to move. Position is 5rk1/1ppq2p1/p2p2np/3Ppr2/4N3/1PPQR1P1/2P2P1P/R5K1 b - - 3 24. What is the best move?,knight on g6 to e7
+Black to move. Position is r2qr1k1/ppn2nbp/3p2p1/2pP1pP1/2P2P2/2NB3P/PP1B2K1/1R1Q1R2 b - - 4 20. What is the best move?,rook on e8 to e7
+Black to move. Position is rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 5 9. What is the best move?,bishop on c8 to g4
+Black to move. Position is r1bqr1k1/p1n2pbp/1p1p1np1/2pP4/P1N1P3/2N2P2/1P2B1PP/R1BQ1RK1 b - - 1 13. What is the best move?,bishop on c8 to a6
+White to move. Position is rnbqk2r/ppp2ppp/4pn2/3p4/1bPP4/2N5/PPQ1PPPP/R1B1KBNR w KQkq - 0 5. What is the best move?,pawn on a2 to a3
+White to move. Position is r1br2k1/p3qpp1/1ppbpn1p/8/2PP4/1P1Q1N2/PBB2PPP/R4RK1 w - - 3 15. What is the best move?,rook on a1 to e1
+White to move. Position is rnbqk2r/ppppppbp/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4. What is the best move?,pawn on e2 to e4
+Black to move. Position is rnbq1rk1/1ppp1ppp/4pn2/p7/1bPP4/5NP1/PP1BPPBP/RN1QK2R b KQ - 2 6. What is the best move?,pawn on d7 to d5
+White to move. Position is rnbqkbnr/pp2pppp/8/2pp4/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 0 3. What is the best move?,pawn on e4 captures pawn on d5
+Black to move. Position is 4n1r1/2p3P1/pp2k3/2p1B3/4PK2/2P5/P1P3R1/8 b - - 6 37. What is the best move?,king on e6 to f7
+White to move. Position is 3k4/6R1/3Bp3/5p1p/7P/1r2P3/3n1PP1/6K1 w - - 0 28. What is the best move?,rook on g7 to h7
+White to move. Position is r1b1k1r1/ppppnp1p/1b6/1B6/1P2P1Q1/N1q5/P4PPP/1RB2RK1 w q - 2 13. What is the best move?,queen on g4 to h5
+White to move. Position is rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2. What is the best move?,knight on g1 to f3
+White to move. Position is 1nk1r3/2p1r1pp/pp3p2/2p2P2/4PBP1/2PR1K2/P1P4P/3R4 w - - 3 23. What is the best move?,rook on d3 to e3
+White to move. Position is r1bq1rk1/2pnn1bp/1p1p2p1/p2Ppp2/1PP1P3/P1N5/3NBPPP/1RBQ1RK1 w - - 0 13. What is the best move?,pawn on f2 to f3
+Black to move. Position is 2r1nrk1/pb1p2pQ/4qp2/1p6/3P3R/P5N1/6PP/R1B3K1 b - - 0 21. What is the best move?,king on g8 to f7
+Black to move. Position is r2q1rk1/pbpnbppp/1p3n2/3pN3/3P4/5NP1/PP2PPBP/R1BQ1RK1 b - - 3 10. What is the best move?,rook on f8 to e8
+Black to move. Position is rn1rk3/pbq3pp/1p1bB3/2pPP3/5B2/6P1/PPQ2P1P/R4RK1 b - - 0 18. What is the best move?,bishop on d6 captures pawn on e5
+Black to move. Position is r4rk1/1p3ppp/1np3b1/p2p2B1/Pb1P2PP/1P1BPP2/3NK3/R6R b - - 0 17. What is the best move?,bishop on g6 captures bishop on d3
+White to move. Position is 3r1k1r/p4ppp/2Q1bq2/4N3/1b6/2N5/PP3PPP/R3K2R w KQ - 1 15. What is the best move?,queen on c6 to b5
+Black to move. Position is 3q1rk1/r7/1pn1b1nb/p3p3/P2pP3/3P1PB1/1P2R1B1/R1NQ1NK1 b - - 1 23. What is the best move?,rook on a7 to g7
+White to move. Position is 8/R6p/6pk/2p1rb2/P1P4P/2K2p2/7P/5B2 w - - 4 33. What is the best move?,king on c3 to d2
+White to move. Position is r2r2k1/1pp1qp1p/2b2p2/n3pP2/p3P1P1/1PP1QN1P/P1B3K1/R2R4 w - - 1 24. What is the best move?,queen on e3 to h6
+Black to move. Position is r1bqkb1r/pp1n1ppp/2p1pn2/6N1/2BP4/8/PPP1QPPP/R1B1K1NR b KQkq - 1 7. What is the best move?,knight on d7 to b6
+Black to move. Position is r1bqr1k1/pp1nbpp1/2p2n1p/3p4/3P4/2NBPNB1/PPQ2PPP/R4RK1 b - - 7 12. What is the best move?,pawn on a7 to a6
+Black to move. Position is rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1. What is the best move?,pawn on d7 to d5
+Black to move. Position is 1r5k/p5p1/2B2r2/1p1P1p2/5n1q/2P2P2/P2Q3P/R4K1R b - - 0 25. What is the best move?,rook on f6 captures bishop on c6
+Black to move. Position is 8/8/1B2k3/5pRp/7P/3n1PK1/r5P1/8 b - - 19 55. What is the best move?,knight on d3 to e1
+Black to move. Position is rn1qk2r/pp2bpp1/2p1pn1p/3p1b2/4P3/3P1NP1/PPPN1PBP/R1B1QRK1 b kq - 0 8. What is the best move?,bishop on f5 to h7
+Black to move. Position is 2br1bk1/r4p2/5q1p/p1pPp1pP/PpN1P1P1/1Q3PN1/1P3RK1/2R5 b - - 13 27. What is the best move?,queen on f6 to e7

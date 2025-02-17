@@ -5,6 +5,31 @@ def convert_fen_to_board_string(fen: str):
     text = str(board)
     return text
 
+def parse_fen(fen: str):
+    components = fen.split(" ")
+    player_to_move = "White" if components[1] == "w" else "Black"
+    castling_rights = ""
+    if "K" in components[2]:
+        castling_rights += "White can castle kingside. "
+    if "Q" in components[2]:
+        castling_rights += "White can castle queenside. "
+    if "k" in components[2]:
+        castling_rights += "Black can castle kingside. "
+    if "q" in components[2]:
+        castling_rights += "Black can castle queenside. "
+    if components[2] == "-":
+        castling_rights = "No castling rights remaining."
+    en_passant_target_square = components[3] if components[3] != "-" else "None"
+    return {
+        "board": convert_fen_to_board_string(fen),
+        "player_to_move": player_to_move,
+        "castling_rights": castling_rights,
+        "en_passant_target": en_passant_target_square,
+        "halfmove_clock": int(components[4]),
+        "fullmove_number": int(components[5])
+    }
+
+
 def convert_move_to_text(fen: str, best_move: str):
     letter_to_word = {
         "P": "pawn",

@@ -4,9 +4,7 @@ import chess.svg
 from stockfish import Stockfish
 import csv
 import random
-from functions.functions import fen_to_text
-
-# Note: The comment might not always align with the objective best move
+from functions.functions import convert_fen_to_board_string
 
 # Adjustable variables
 stockfish_path = "C:/Users/huang/repos/Personal/chess-ai/stockfish.exe"
@@ -56,9 +54,9 @@ def parse_pgns(directory_path):
                 player_to_move = 'White' if board.turn else 'Black'
 
                 if comment:
-                    # games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{fen_to_text(fen_string)}\nThe best move is {best_move} and the centipawn loss is {evaluation['value']}. Explain why {best_move} is the best move.",
+                    # games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{convert_fen_to_board_string(fen_string)}\nThe best move is {best_move} and the centipawn loss is {evaluation['value']}. Explain why {best_move} is the best move.",
                     #                    "label": comment})
-                    games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{fen_to_text(fen_string)}\nThe best move is {best_move}. Explain why {best_move} is the best move.",
+                    games_data.append({"inputs": f"It is {player_to_move}'s turn to move. The board position is:\n{convert_fen_to_board_string(fen_string)}\nThe best move is {best_move}. Explain why {best_move} is the best move.",
                                        "label": comment})
                     
     random.shuffle(games_data)
@@ -69,29 +67,25 @@ def parse_pgns(directory_path):
     test_dataset = games_data[:split_idx]
 
     return train_dataset, test_dataset
-
-# def fen_to_text(fen):
-#     board = chess.Board(fen)
-#     text = str(board)
-#     return text
             
 if __name__ == "__main__":
-    train_dataset, test_dataset = parse_pgns(pgn_folder_path)
+    print(convert_fen_to_board_string("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2"))
+    # train_dataset, test_dataset = parse_pgns(pgn_folder_path)
 
-    with open(train_csv_file_path, mode='w', newline='') as csv_file:
-        fieldnames = ['inputs', 'label']
-        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    # with open(train_csv_file_path, mode='w', newline='') as csv_file:
+    #     fieldnames = ['inputs', 'label']
+    #     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
-        writer.writeheader()
-        for data in train_dataset:
-            writer.writerow(data)
+    #     writer.writeheader()
+    #     for data in train_dataset:
+    #         writer.writerow(data)
 
-    with open(test_csv_file_path, mode='w', newline='') as csv_file:
-        fieldnames = ['inputs', 'label']
-        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    # with open(test_csv_file_path, mode='w', newline='') as csv_file:
+    #     fieldnames = ['inputs', 'label']
+    #     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
-        writer.writeheader()
-        for data in test_dataset:
-            writer.writerow(data)
+    #     writer.writeheader()
+    #     for data in test_dataset:
+    #         writer.writerow(data)
 
-    print(f"Games data saved to {train_csv_file_path} and {test_csv_file_path}")
+    # print(f"Games data saved to {train_csv_file_path} and {test_csv_file_path}")

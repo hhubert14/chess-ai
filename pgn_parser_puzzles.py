@@ -4,7 +4,7 @@ import chess.svg
 from stockfish import Stockfish
 import csv
 import random
-from functions.functions import fen_to_text, convert_move_to_text
+from functions.functions import convert_fen_to_board_string, convert_move_to_text
 
 # Adjustable variables
 stockfish_path = "C:/Users/huang/repos/Personal/chess-ai/stockfish.exe"

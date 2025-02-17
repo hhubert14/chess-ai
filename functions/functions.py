@@ -1,6 +1,6 @@
 import chess
 
-def fen_to_text(fen: str):
+def convert_fen_to_board_string(fen: str):
     board = chess.Board(fen)
     text = str(board)
     return text
@@ -68,3 +68,5 @@ def get_piece_at_square(fen: str, square: str):
     board = chess.Board(fen)
     piece = board.piece_at(chess.parse_square(square))
     return piece.symbol() if piece else None
+
+# def fen_to_

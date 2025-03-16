@@ -75,7 +75,6 @@ def parse_pgns(directory_path):
 	return train_dataset, test_dataset
 			
 if __name__ == "__main__":
-	# print(convert_fen_to_board_string("rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2"))
 	train_dataset, test_dataset = parse_pgns(pgn_folder_path)
 
 	# with open(train_csv_file_path, mode='w', newline='') as csv_file:

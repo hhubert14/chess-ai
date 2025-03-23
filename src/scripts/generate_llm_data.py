@@ -10,7 +10,7 @@ from langchain_deepseek import ChatDeepSeek
 from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-from utils import parse_fen
+from utils import parse_fen, safe_invoke
 from errors import CSV_READ_ERROR
 
 load_dotenv()
@@ -72,64 +72,74 @@ for index, puzzle in puzzles.iterrows():
         ]
     )
     position_chain = position_assessment_prompt | llm
-    position_result = position_chain.invoke(base_info).content
-    # print("position_result: ", position_result)
+    position_result = safe_invoke(position_chain, base_info)
+    if not position_result:
+        print("Failed to get position assessment. Skipping puzzle.")
+        continue
 
     # King Safety Assessment
     print("Analyzing King Safety")
     king_safety_prompt = ChatPromptTemplate.from_template(KING_SAFETY_PROMPT)
     king_safety_chain = king_safety_prompt | llm
-    king_safety_result = king_safety_chain.invoke({
+    king_safety_result = safe_invoke(king_safety_chain, {
         **base_info,
         "material_assessment": position_result
-    }).content
-    # print("king_safety_result: ", king_safety_result)
+    })
+    if not king_safety_result:
+        print("Failed to get king safety assessment. Skipping puzzle.")
+        continue
 
     # Tactical Analysis
     print("Analyzing Tactical Analysis")
     tactical_analysis_prompt = ChatPromptTemplate.from_template(TACTICAL_ANALYSIS_PROMPT)
     tactical_analysis_chain = tactical_analysis_prompt | llm
-    tactical_analysis_result = tactical_analysis_chain.invoke({
+    tactical_analysis_result = safe_invoke(tactical_analysis_chain, {
         **base_info,
         "material_assessment": position_result,
         "king_safety_assessment": king_safety_result
-    }).content
-    # print("tactical_analysis_result: ", tactical_analysis_result)
+    })
+    if not tactical_analysis_result:
+        print("Failed to get tactical analysis. Skipping puzzle.")
+        continue
 
     # Strategic Analysis
     print("Analyzing Strategic Analysis")
     strategic_analysis_prompt = ChatPromptTemplate.from_template(STRATEGIC_ANALYSIS_PROMPT)
     strategic_analysis_chain = strategic_analysis_prompt | llm
-    strategic_analysis_result = strategic_analysis_chain.invoke({
+    strategic_analysis_result = safe_invoke(strategic_analysis_chain, {
         **base_info,
         "material_assessment": position_result,
         "king_safety_assessment": king_safety_result,
         "tactical_assessment": tactical_analysis_result
-    }).content
-    # print("strategic_analysis_result: ", strategic_analysis_result)
+    })
+    if not strategic_analysis_result:
+        print("Failed to get strategic analysis. Skipping puzzle.")
+        continue
 
     # Best Move Analysis
     print("Analyzing Best Move")
     best_move_prompt = ChatPromptTemplate.from_template(BEST_MOVE_PROMPT)
     best_move_chain = best_move_prompt | llm
-    best_move_result = best_move_chain.invoke({
+    best_move_result = safe_invoke(best_move_chain, {
         **base_info,
         "material_assessment": position_result,
         "king_safety_assessment": king_safety_result,
         "tactical_assessment": tactical_analysis_result,
         "strategic_assessment": strategic_analysis_result
-    }).content
-    # print("best_move_result: ", best_move_result)
+    })
+    if not best_move_result:
+        print("Failed to get best move analysis. Skipping puzzle.")
+        continue
 
     # Combine all results
-    final_result = {
-        **base_info,
-        "material_assessment": position_result,
-        "king_safety_assessment": king_safety_result,
-        "tactical_assessment": tactical_analysis_result,
-        "strategic_assessment": strategic_analysis_result,
-        "best_move_analysis": best_move_result
-    }
+    # final_result = {
+    #     **base_info,
+    #     "material_assessment": position_result,
+    #     "king_safety_assessment": king_safety_result,
+    #     "tactical_assessment": tactical_analysis_result,
+    #     "strategic_assessment": strategic_analysis_result,
+    #     "best_move_analysis": best_move_result
+    # }
     # print("\nFinal Result:", final_result)
     regex = r"UCI Notation:\S*\s+(\w{4,5})"
     match: re.Match = re.search(regex, best_move_result)

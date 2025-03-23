@@ -12,6 +12,7 @@
 - [x] Prepare csv file with different FEN positions and best move
 - [ ] Create chain to loop through positions analyze positions and prediction best move
   - [ ] store these in another file
+- [ ] In parse_lichess_puzzles.py, add the functionality to start at a specific row for lichess_db_puzzle.csv
 - [ ] Write util to convert from UCI notation to algebraic notation
 - [ ] Add during inference: When deploying your model, you can include the notation explanation in your prompt template or you can add it as a system prompt:
 ```

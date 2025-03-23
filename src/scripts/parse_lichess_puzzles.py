@@ -36,12 +36,13 @@ results = []
 for index, puzzle in puzzles.iterrows():
     print(f"Parsing puzzle {index + 1}/{len(puzzles)}")
     puzzle_fen = puzzle["FEN"]
-    best_move = get_best_move(puzzle_fen)
+    best_move = get_best_move(puzzle_fen, 5000)
     results.append({"FEN": puzzle_fen, "best_move": best_move})
-    if index % 1000 == 0:
+    if index % 100 == 0:  # Save every 100 puzzles
         print(f"Saving results to {OUTPUT_PATH}")
         simplified_puzzles = pd.DataFrame(results)
-        simplified_puzzles.to_csv(OUTPUT_PATH, index=False)
+        simplified_puzzles.to_csv(OUTPUT_PATH, mode="a", header=False, index=False)
+        results = []  # Reset results for next batch
 
 # Create DataFrame from results and save
 simplified_puzzles = pd.DataFrame(results)

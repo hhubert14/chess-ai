@@ -1,6 +1,4 @@
-POSITION_ASSESSMENT_PROMPT = """K, Q, R, B, N, P are the notations for the white king, queen, rook, bishop, knight, and pawn respectively.
-The notation for the black pieces are the same but with lowercased letters. A period represents an empty square.
-Assess the material balance and piece placement in the following chess position:
+POSITION_ASSESSMENT_PROMPT = """Assess the material balance and piece placement in the following chess position:
 
 {board}
 

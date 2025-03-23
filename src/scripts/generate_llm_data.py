@@ -19,7 +19,7 @@ with open(os.getenv("CONFIG_PATH")) as file:
     config = yaml.safe_load(file)
 
 BASE_DIR = config["BASE_DIR"]
-INPUT_DIR = os.path.join("src", "data", "datasets", "puzzles", "playground_puzzles.csv")
+INPUT_DIR = os.path.join("src", "data", "datasets", "puzzles", "lichess_puzzles.csv")
 OUTPUT_DIR = os.path.join("src", "data", "datasets", "llm_finetuning", "playground_dataset.csv")
 
 from prompts import (

@@ -145,7 +145,7 @@ for index, puzzle in puzzles.iterrows():
     match: re.Match = re.search(regex, best_move_result)
 
     if not match or match.group(1) != puzzle["best_move"]:
-        print("No match found")
+        print(f"Predicted move does not match correct move: {match.group(1)}")
         continue
 
     print(f"Predicted move matches correct move: {match.group(1)}")

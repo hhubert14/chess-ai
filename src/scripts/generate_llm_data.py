@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 from dotenv import load_dotenv
 import yaml
@@ -10,6 +11,7 @@ from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, H
 from langchain_core.output_parsers import StrOutputParser
 
 from utils import parse_fen
+from errors import CSV_READ_ERROR
 
 load_dotenv()
 
@@ -17,8 +19,8 @@ with open(os.getenv("CONFIG_PATH")) as file:
     config = yaml.safe_load(file)
 
 BASE_DIR = config["BASE_DIR"]
-INPUT_DIR = "src\data\datasets\puzzles\playground_puzzles.csv"
-OUTPUT_DIR = "src\data\datasets\llm_finetuning\playground_dataset.csv"
+INPUT_DIR = os.path.join("src", "data", "datasets", "puzzles", "playground_puzzles.csv")
+OUTPUT_DIR = os.path.join("src", "data", "datasets", "llm_finetuning", "playground_dataset.csv")
 
 from prompts import (
     SYSTEM_PROMPT,
@@ -44,8 +46,12 @@ llm = ChatDeepSeek(
     max_retries=2,
 )
 
-puzzles = pd.read_csv(BASE_DIR + INPUT_DIR)
-dataset = pd.read_csv(BASE_DIR + OUTPUT_DIR)
+try:
+    puzzles = pd.read_csv(BASE_DIR + INPUT_DIR)
+    dataset = pd.read_csv(BASE_DIR + OUTPUT_DIR)
+except Exception as e:
+    print(f"Error with reading csvs: {e}")
+    sys.exit(CSV_READ_ERROR)
 
 for index, puzzle in puzzles.iterrows():
     print(f"Processing puzzle {index + 1}/{len(puzzles)}")
@@ -56,10 +62,6 @@ for index, puzzle in puzzles.iterrows():
         "castling_rights": fen_info.castling_rights,
         "en_passant_target_square": fen_info.en_passant_target,
     }
-    # board = fen_info.board
-    # side_to_move = fen_info.player_to_move
-    # castling_rights = fen_info.castling_rights
-    # en_passant_target_square = fen_info.en_passant_target
 
     # Position Assessment
     print("Analyzing Position")
@@ -129,25 +131,29 @@ for index, puzzle in puzzles.iterrows():
         "best_move_analysis": best_move_result
     }
     # print("\nFinal Result:", final_result)
-    regex = r"UCI Notation:\S*\s+(\w{4})"
+    regex = r"UCI Notation:\S*\s+(\w{4,5})"
     match: re.Match = re.search(regex, best_move_result)
-    if match and match.group(1) == puzzle["best_move"]:
-        print(f"Predicted move matches correct move: {match.group(1)}")
-        dataset.loc[len(dataset)] = {
-            "input": INPUT_PROMPT.format(
-                board=base_info["board"],
-                side_to_move=base_info["side_to_move"],
-                castling_rights=base_info["castling_rights"],
-                en_passant_target_square=base_info["en_passant_target_square"],
-                best_move=match.group(1),
-            ),
-            "output": OUTPUT_PROMPT.format(
-                material_assessment=position_result,
-                king_safety_assessment=king_safety_result,
-                tactical_assessment=tactical_analysis_result,
-                strategic_assessment=strategic_analysis_result,
-                best_move_analysis=best_move_result,
-            )
-        }
-        dataset.to_csv(BASE_DIR + OUTPUT_DIR, index=False)
+
+    if not match or match.group(1) != puzzle["best_move"]:
+        print("No match found")
+        continue
+
+    print(f"Predicted move matches correct move: {match.group(1)}")
+    dataset.loc[len(dataset)] = {
+        "input": INPUT_PROMPT.format(
+            board=base_info["board"],
+            side_to_move=base_info["side_to_move"],
+            castling_rights=base_info["castling_rights"],
+            en_passant_target_square=base_info["en_passant_target_square"],
+            best_move=match.group(1),
+        ),
+        "output": OUTPUT_PROMPT.format(
+            material_assessment=position_result,
+            king_safety_assessment=king_safety_result,
+            tactical_assessment=tactical_analysis_result,
+            strategic_assessment=strategic_analysis_result,
+            best_move_analysis=best_move_result,
+        )
+    }
+    dataset.to_csv(BASE_DIR + OUTPUT_DIR, index=False)
 

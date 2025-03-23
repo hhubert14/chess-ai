@@ -38,6 +38,10 @@ for index, puzzle in puzzles.iterrows():
     puzzle_fen = puzzle["FEN"]
     best_move = get_best_move(puzzle_fen)
     results.append({"FEN": puzzle_fen, "best_move": best_move})
+    if index % 1000 == 0:
+        print(f"Saving results to {OUTPUT_PATH}")
+        simplified_puzzles = pd.DataFrame(results)
+        simplified_puzzles.to_csv(OUTPUT_PATH, index=False)
 
 # Create DataFrame from results and save
 simplified_puzzles = pd.DataFrame(results)

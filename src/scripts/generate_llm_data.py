@@ -1,4 +1,5 @@
 import os
+import re
 
 from dotenv import load_dotenv
 import yaml
@@ -16,7 +17,8 @@ with open(os.getenv("CONFIG_PATH")) as file:
     config = yaml.safe_load(file)
 
 BASE_DIR = config["BASE_DIR"]
-INPUT_DIR = "src\data\datasets\puzzles\lichess_puzzles.csv"
+INPUT_DIR = "src\data\datasets\puzzles\playground_puzzles.csv"
+OUTPUT_DIR = "src\data\datasets\llm_finetuning\playground_dataset.csv"
 
 from prompts import (
     SYSTEM_PROMPT,
@@ -25,6 +27,8 @@ from prompts import (
     TACTICAL_ANALYSIS_PROMPT,
     STRATEGIC_ANALYSIS_PROMPT,
     BEST_MOVE_PROMPT,
+    INPUT_PROMPT,
+    OUTPUT_PROMPT,
 )
 
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
@@ -41,8 +45,10 @@ llm = ChatDeepSeek(
 )
 
 puzzles = pd.read_csv(BASE_DIR + INPUT_DIR)
+dataset = pd.read_csv(BASE_DIR + OUTPUT_DIR)
 
 for index, puzzle in puzzles.iterrows():
+    print(f"Processing puzzle {index + 1}/{len(puzzles)}")
     fen_info = parse_fen(puzzle["FEN"])
     base_info = {
         "board": fen_info.board,
@@ -56,6 +62,7 @@ for index, puzzle in puzzles.iterrows():
     # en_passant_target_square = fen_info.en_passant_target
 
     # Position Assessment
+    print("Analyzing Position")
     position_assessment_prompt = ChatPromptTemplate(
         [
             ("system", SYSTEM_PROMPT),
@@ -63,58 +70,84 @@ for index, puzzle in puzzles.iterrows():
         ]
     )
     position_chain = position_assessment_prompt | llm
-    position_result = position_chain.invoke(base_info)
-    print("position_result: ", position_result.content)
+    position_result = position_chain.invoke(base_info).content
+    # print("position_result: ", position_result)
 
     # King Safety Assessment
+    print("Analyzing King Safety")
     king_safety_prompt = ChatPromptTemplate.from_template(KING_SAFETY_PROMPT)
     king_safety_chain = king_safety_prompt | llm
     king_safety_result = king_safety_chain.invoke({
         **base_info,
-        "material_assessment": position_result.content
-    })
-    print("king_safety_result: ", king_safety_result.content)
+        "material_assessment": position_result
+    }).content
+    # print("king_safety_result: ", king_safety_result)
 
     # Tactical Analysis
+    print("Analyzing Tactical Analysis")
     tactical_analysis_prompt = ChatPromptTemplate.from_template(TACTICAL_ANALYSIS_PROMPT)
     tactical_analysis_chain = tactical_analysis_prompt | llm
     tactical_analysis_result = tactical_analysis_chain.invoke({
         **base_info,
-        "material_assessment": position_result.content,
-        "king_safety_assessment": king_safety_result.content
-    })
-    print("tactical_analysis_result: ", tactical_analysis_result.content)
+        "material_assessment": position_result,
+        "king_safety_assessment": king_safety_result
+    }).content
+    # print("tactical_analysis_result: ", tactical_analysis_result)
 
     # Strategic Analysis
+    print("Analyzing Strategic Analysis")
     strategic_analysis_prompt = ChatPromptTemplate.from_template(STRATEGIC_ANALYSIS_PROMPT)
     strategic_analysis_chain = strategic_analysis_prompt | llm
     strategic_analysis_result = strategic_analysis_chain.invoke({
         **base_info,
-        "material_assessment": position_result.content,
-        "king_safety_assessment": king_safety_result.content,
-        "tactical_assessment": tactical_analysis_result.content
-    })
-    print("strategic_analysis_result: ", strategic_analysis_result.content)
+        "material_assessment": position_result,
+        "king_safety_assessment": king_safety_result,
+        "tactical_assessment": tactical_analysis_result
+    }).content
+    # print("strategic_analysis_result: ", strategic_analysis_result)
 
     # Best Move Analysis
+    print("Analyzing Best Move")
     best_move_prompt = ChatPromptTemplate.from_template(BEST_MOVE_PROMPT)
     best_move_chain = best_move_prompt | llm
     best_move_result = best_move_chain.invoke({
         **base_info,
-        "material_assessment": position_result.content,
-        "king_safety_assessment": king_safety_result.content,
-        "tactical_assessment": tactical_analysis_result.content,
-        "strategic_assessment": strategic_analysis_result.content
-    })
-    print("best_move_result: ", best_move_result.content)
+        "material_assessment": position_result,
+        "king_safety_assessment": king_safety_result,
+        "tactical_assessment": tactical_analysis_result,
+        "strategic_assessment": strategic_analysis_result
+    }).content
+    # print("best_move_result: ", best_move_result)
 
     # Combine all results
     final_result = {
         **base_info,
-        "material_assessment": position_result.content,
-        "king_safety_assessment": king_safety_result.content,
-        "tactical_assessment": tactical_analysis_result.content,
-        "strategic_assessment": strategic_analysis_result.content,
-        "best_move_analysis": best_move_result.content
+        "material_assessment": position_result,
+        "king_safety_assessment": king_safety_result,
+        "tactical_assessment": tactical_analysis_result,
+        "strategic_assessment": strategic_analysis_result,
+        "best_move_analysis": best_move_result
     }
-    print("\nFinal Result:", final_result)
+    # print("\nFinal Result:", final_result)
+    regex = r"UCI Notation:\S*\s+(\w{4})"
+    match: re.Match = re.search(regex, best_move_result)
+    if match and match.group(1) == puzzle["best_move"]:
+        print(f"Predicted move matches correct move: {match.group(1)}")
+        dataset.loc[len(dataset)] = {
+            "input": INPUT_PROMPT.format(
+                board=base_info["board"],
+                side_to_move=base_info["side_to_move"],
+                castling_rights=base_info["castling_rights"],
+                en_passant_target_square=base_info["en_passant_target_square"],
+                best_move=match.group(1),
+            ),
+            "output": OUTPUT_PROMPT.format(
+                material_assessment=position_result,
+                king_safety_assessment=king_safety_result,
+                tactical_assessment=tactical_analysis_result,
+                strategic_assessment=strategic_analysis_result,
+                best_move_analysis=best_move_result,
+            )
+        }
+        dataset.to_csv(BASE_DIR + OUTPUT_DIR, index=False)
+

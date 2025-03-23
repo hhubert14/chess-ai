@@ -2,7 +2,7 @@ import pandas as pd
 
 from utils import get_best_move
 
-puzzles = pd.read_csv("C:/Users/huang/repos/Personal/chess-ai/src/data/datasets/puzzles/lichess_db_puzzle.csv")
+# puzzles = pd.read_csv("C:/Users/huang/repos/Personal/chess-ai/src/data/datasets/puzzles/lichess_db_puzzle.csv")
 
-print(puzzles.head)
-# print(get_best_move("7k/1p3Q1p/p3Rnr1/2p5/r7/7P/1P1q1PP1/4R1K1 w - - 0 1"))
+# print(puzzles.head)
+print(get_best_move("3r4/2R2pb1/4pk1p/6p1/8/3P3P/Pr3qP1/4QR1K b - - 0 1"))

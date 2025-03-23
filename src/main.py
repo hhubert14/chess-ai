@@ -4,7 +4,7 @@ from runpy import run_module
 
 def main():
     # run_module("scripts.generate_data")
-    run_module("scripts.get_best_moves")
+    run_module("scripts.parse_lichess_puzzles")
 
 if __name__ == "__main__":
     main()

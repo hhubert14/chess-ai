@@ -23,7 +23,7 @@ llm = ChatDeepSeek(
 messages = [
     (
         "system",
-        "You are a helpful assistant that translates English to French. Translate the user sentence.",
+        "You are a chess tutor",
     ),
     ("human", "I love programming."),
 ]

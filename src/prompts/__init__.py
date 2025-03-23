@@ -8,6 +8,7 @@ from .chess_analysis_prompts import (
 )
 from .playground_prompts import TEST1
 from .training_prompts import INPUT_PROMPT, OUTPUT_PROMPT
+from .system_prompts import SYSTEM_PROMPT
 
 __all__ = [
     "POSITION_ASSESSMENT_PROMPT",
@@ -18,5 +19,6 @@ __all__ = [
     "COMBINED_ANALYSIS_PROMPT",
     "INPUT_PROMPT",
     "OUTPUT_PROMPT",
+    "SYSTEM_PROMPT",
     "TEST1",
 ]

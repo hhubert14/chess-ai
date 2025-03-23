@@ -5,7 +5,16 @@ from utils.board_utils import convert_fen_to_board_string
 
 @dataclass
 class FenInfo:
-    """Structured FEN information."""
+    """Structured representation of a chess position's FEN (Forsyth-Edwards Notation) components.
+    
+    Attributes:
+        board: ASCII representation of the chess board
+        player_to_move: Current player's turn ("White" or "Black")
+        castling_rights: Available castling moves in human-readable format
+        en_passant_target: Square where en passant capture is possible, or "None"
+        halfmove_clock: Number of moves since last pawn move or capture (for 50-move rule)
+        fullmove_number: Complete game move counter, starting from 1
+    """
     board: str
     player_to_move: str
     castling_rights: str
@@ -14,7 +23,22 @@ class FenInfo:
     fullmove_number: int
 
 def parse_fen(fen: str) -> FenInfo:
-    """Parse FEN string into structured information."""
+    """Parse a Forsyth-Edwards Notation (FEN) string into structured game state information.
+    
+    Extracts and formats:
+    - Board position as ASCII representation
+    - Active player (White/Black)
+    - Castling availability for both sides
+    - En passant target square
+    - Halfmove clock for 50-move rule
+    - Fullmove counter
+    
+    Args:
+        fen: A valid FEN string representing a chess position
+        
+    Returns:
+        FenInfo: Dataclass containing parsed and formatted FEN components
+    """
     components = fen.split(" ")
     
     castling_rights = ""

@@ -96,9 +96,8 @@ Determine the single best move in this position:
 3. Evaluate the resulting positions
 4. Select the move that best addresses the key factors identified in the analysis
 
-Return the best move in UCI notation (e.g., e2e4, e7e5, e1g1, e7e8q) and explain why this move is optimal, referencing specific elements from the previous analyses.
-
-UCI Notation: 
+Explain why the move is optimal, then provide the move in this exact format:
+UCI Notation: [move in UCI format, e.g., e2e4, e7e5, e1g1, e7e8q]
 """
 
 # Might be unnecessary

@@ -40,7 +40,7 @@ LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
 llm = ChatDeepSeek(
     api_key=DEEPSEEK_API_KEY,
     model="deepseek-reasoner",
-    temperature=0,
+    temperature=1,
     max_tokens=None,
     timeout=None,
     max_retries=2,
@@ -131,31 +131,27 @@ for index, puzzle in puzzles.iterrows():
         print("Failed to get best move analysis. Skipping puzzle.")
         continue
 
-    # Combine all results
-    # final_result = {
-    #     **base_info,
-    #     "material_assessment": position_result,
-    #     "king_safety_assessment": king_safety_result,
-    #     "tactical_assessment": tactical_analysis_result,
-    #     "strategic_assessment": strategic_analysis_result,
-    #     "best_move_analysis": best_move_result
-    # }
-    # print("\nFinal Result:", final_result)
+    # Extract move from analysis
     regex = r"UCI Notation:\S*\s+(\w{4,5})"
-    match: re.Match = re.search(regex, best_move_result)
-
-    if not match or match.group(1) != puzzle["best_move"]:
-        print(f"Predicted move does not match correct move: {match.group(1)}")
+    match = re.search(regex, best_move_result)
+    
+    if not match:
+        print(f"Could not extract move from analysis. Response was: {best_move_result}")
+        continue
+        
+    predicted_move = match.group(1)
+    if predicted_move != puzzle["best_move"]:
+        print(f"Predicted move {predicted_move} does not match correct move {puzzle['best_move']}. Response was: {best_move_result}")
         continue
 
-    print(f"Predicted move matches correct move: {match.group(1)}")
+    print(f"Predicted move matches correct move: {predicted_move}")
     dataset.loc[len(dataset)] = {
         "input": INPUT_PROMPT.format(
             board=base_info["board"],
             side_to_move=base_info["side_to_move"],
             castling_rights=base_info["castling_rights"],
             en_passant_target_square=base_info["en_passant_target_square"],
-            best_move=match.group(1),
+            best_move=predicted_move,
         ),
         "output": OUTPUT_PROMPT.format(
             material_assessment=position_result,

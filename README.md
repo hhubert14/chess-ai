@@ -28,3 +28,4 @@ Chess Position Notation Guide:
 
 # Future Considerations
 - Test fine-tuning approach with vs without notation explanation (K, Q, R, B, N, P are the notations...explain why the best move is as shown:) - Most likely unnecessary
+- Self-supervised learning on chess data.

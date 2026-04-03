@@ -1,31 +1,33 @@
-# Used Chess Sites
-- https://chesstempo.com/
+# Chess AI
 
-# Puzzle Data
-- https://database.lichess.org/#puzzles
-- https://czoins.github.io/sorted-lichess-puzzles/
-- https://github.com/rebeccaloran/432k-chess-puzzles
-- https://www.wtharvey.com/
+A chess move prediction system that fine-tunes large language models to analyze board positions and predict optimal moves.
 
-# TODOs
-- [x] Gather puzzle FEN positions
-- [x] Prepare csv file with different FEN positions and best move
-- [ ] Create chain to loop through positions analyze positions and prediction best move
-  - [ ] store these in another file
-- [ ] In parse_lichess_puzzles.py, add the functionality to start at a specific row for lichess_db_puzzle.csv
-- [ ] Write util to convert from UCI notation to algebraic notation
-- [ ] Create a logger file instead of writing to console for debugging purposes.
-- [ ] In generate_llm_data.py, instead of matching the best move exactly, accept moves that are also very close to the best move in terms of evaluation
-- [ ] Add during inference: When deploying your model, you can include the notation explanation in your prompt template or you can add it as a system prompt:
+## Approach
+
+1. **Data Collection** — Gather chess puzzle FEN positions from Lichess and other databases
+2. **Data Preparation** — Parse positions and pair them with best-move labels in a structured CSV format
+3. **LLM Fine-Tuning** — Fine-tune language models on FEN position analysis to predict strong moves
+4. **Evaluation** — Compare predicted moves against engine-evaluated best moves
+
+## Project Structure
+
 ```
-Chess Position Notation Guide:
-- K, Q, R, B, N, P represent white King, Queen, Rook, Bishop, Knight, and Pawn
-- k, q, r, b, n, p represent black pieces
-- Periods (.) represent empty squares
-- Board is shown from White's perspective (a1 is bottom left)
+chess-ai/
+├── config/         # Configuration files
+├── docs/           # Documentation and notes
+├── engines/        # Chess engine integrations
+├── notebooks/      # Jupyter notebooks for experiments
+└── src/            # Source code for data processing and model training
 ```
 
+## Data Sources
 
-# Future Considerations
-- Test fine-tuning approach with vs without notation explanation (K, Q, R, B, N, P are the notations...explain why the best move is as shown:) - Most likely unnecessary
-- Self-supervised learning on chess data.
+- [Lichess Puzzle Database](https://database.lichess.org/#puzzles)
+- [Sorted Lichess Puzzles](https://czoins.github.io/sorted-lichess-puzzles/)
+- [432k Chess Puzzles](https://github.com/rebeccaloran/432k-chess-puzzles)
+
+## Tech Stack
+
+- Python, Jupyter Notebooks
+- LLM fine-tuning (LoRA)
+- Chess position encoding (FEN notation)
